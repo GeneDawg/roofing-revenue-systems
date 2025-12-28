@@ -2,783 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Roofing Revenue Systems™ | Lead Intelligence • Claims Strategy • Scalable Revenue</title>
-  <meta name="description" content="Raise your bottom line Day 1. We integrate lead intelligence, claims strategy, settlement workflows, controlled disbursement, and rejuvenation revenue to create immediate value for roofing and exterior companies." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roofing Revenue Systems™</title>
 
   <style>
-    :root{
-      --bg:#0b0c10;
-      --panel:#101114;
-      --panel2:#15161c;
-      --text:#f6f7fb;
-      --muted:#b9bdc9;
-      --muted2:#8b90a0;
-      --line:#242633;
-      --accent:#C8102E;
-      --ok:#19c37d;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
-      --radius2:14px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(900px 500px at 20% -10%, rgba(200,16,46,.25), transparent 60%),
-                  radial-gradient(700px 500px at 95% 10%, rgba(255,255,255,.10), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.35;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+      background:#0b0c10;
+      color:#f6f7fb;
     }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 72px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 16px; border:1px solid var(--line); border-radius:999px;
-      background:rgba(16,17,20,.65); backdrop-filter: blur(10px);
-      position:sticky; top:12px; z-index:20;
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:32px 20px}
+    h1,h2,h3{margin:0 0 12px}
+    p{color:#b9bdc9;line-height:1.5}
+
+    /* Top */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border:1px solid #242633;
+      border-radius:999px;
+      padding:14px 20px;
+      margin-bottom:30px;
+      background:#101114;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
-    .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
-      border:1px solid var(--line); background:rgba(21,22,28,.8); font-size:12px; color:var(--muted)
-    }
-    .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
-    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .nav a{font-size:13px; text-decoration:none; padding:8px 10px; border-radius:999px; border:1px solid transparent; color:var(--muted)}
-    .nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.04)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      background: linear-gradient(135deg, rgba(200,16,46,1), rgba(200,16,46,.75));
-      color:#fff; text-decoration:none;
-      padding:11px 14px; border-radius:999px; font-weight:800; letter-spacing:.2px;
-      border:1px solid rgba(255,255,255,.15);
-      box-shadow: 0 10px 25px rgba(200,16,46,.18);
-      white-space:nowrap;
-    }
-    .btn.secondary{
-      background:rgba(255,255,255,.06); color:var(--text); border:1px solid var(--line);
-      box-shadow:none; font-weight:700;
+    .brand{font-weight:800}
+    .cta{
+      background:#C8102E;
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:700;
     }
 
+    /* Hero */
     .hero{
-      margin-top:20px;
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr; }
-      .topbar{position:relative; top:auto}
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:20px;
     }
     .card{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(16,17,20,.85), rgba(16,17,20,.65));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-    .heroLeft{padding:26px 22px}
-    h1{margin:0 0 10px; font-size:44px; line-height:1.02; letter-spacing:-.6px;}
-    .sub{color:var(--muted); font-size:16px; margin:0 0 16px; max-width:60ch;}
-    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px}
-    @media (max-width: 640px){ .kpis{grid-template-columns:1fr} }
-    .kpi{
-      padding:12px 12px;
-      border:1px solid var(--line); border-radius:var(--radius2);
-      background:rgba(255,255,255,.03);
-    }
-    .kpi strong{display:block; font-size:14px}
-    .kpi span{display:block; font-size:12px; color:var(--muted)}
-    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .small{font-size:12px; color:var(--muted2)}
-    .heroRight{padding:18px 18px 14px; display:flex; flex-direction:column; gap:12px}
-    .pillRow{display:flex; flex-wrap:wrap; gap:8px}
-    .pill{
-      padding:8px 10px; border-radius:999px; border:1px solid var(--line);
-      background:rgba(255,255,255,.03); font-size:12px; color:var(--muted);
-      display:inline-flex; gap:8px; align-items:center;
-    }
-    .pill b{color:var(--text); font-weight:800}
-    .section{margin-top:22px}
-    .section h2{margin:0 0 10px; font-size:22px}
-    .panel{padding:18px}
-    .panel p{margin:0 0 10px; color:var(--muted)}
-
-    .callout{
-      border:1px solid rgba(200,16,46,.35);
-      background: rgba(200,16,46,.08);
-      border-radius: var(--radius);
-      padding:14px;
-      margin-top:12px;
-      color: rgba(246,247,251,.90);
+      background:#101114;
+      border:1px solid #242633;
+      border-radius:18px;
+      padding:24px;
     }
 
-    .logos{
-      display:grid; grid-template-columns: repeat(4,1fr); gap:10px;
-      margin-top:10px;
+    /* Logos */
+    .logo-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:16px;
     }
-    @media (max-width: 720px){ .logos{grid-template-columns: repeat(2,1fr);} }
-    .logoTile{
-      border:1px dashed rgba(255,255,255,.18);
-      border-radius:14px; padding:12px;
-      background:rgba(255,255,255,.02);
-      display:flex; align-items:center; justify-content:center;
-      height:74px;
+    .logo{
+      background:#0f1016;
+      border:1px dashed #2a2d3c;
+      border-radius:14px;
+      height:80px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
-    .logoTile img{max-height:46px; max-width:100%; object-fit:contain}
+    .logo img{
+      max-height:55px;
+      max-width:100%;
+    }
 
     /* Cycle */
-    .cycleCard{padding:18px}
-    .cycleHeader{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      margin-bottom:10px;
+    .cycle{
+      margin-top:40px;
+      text-align:center;
     }
-    .cycleLayout{display:grid; grid-template-columns: 1.05fr .95fr; gap:14px; align-items:stretch;}
-    @media (max-width: 980px){ .cycleLayout{grid-template-columns:1fr} }
-    .diagram{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.02);
-      padding:14px;
-      min-height:420px;
-      display:flex; align-items:center; justify-content:center;
+    .cycle-ring{
       position:relative;
-      overflow:hidden;
+      width:460px;
+      height:460px;
+      margin:30px auto;
+      border-radius:50%;
+      border:2px dashed rgba(255,255,255,.15);
     }
-    svg{max-width:100%; height:auto}
-    .node{filter: drop-shadow(0 8px 14px rgba(0,0,0,.35)); cursor:pointer;}
-    .nodeCircle{fill: rgba(16,17,20,.92); stroke: rgba(255,255,255,.18); stroke-width: 1.25;}
-    .nodeCircle.active{stroke: rgba(200,16,46,.95); stroke-width: 2.2;}
-    .nodeLabel{fill: var(--text); font-size: 11.5px; font-weight: 800;}
-    .nodeSub{fill: rgba(185,189,201,.95); font-size: 10px; font-weight: 600;}
-    .ring{fill:none; stroke: rgba(255,255,255,.10); stroke-width: 18;}
-    .ring2{fill:none; stroke: rgba(200,16,46,.20); stroke-width: 4; stroke-dasharray: 6 10; animation: dash 10s linear infinite; opacity:.85;}
-    @keyframes dash{to { stroke-dashoffset: -200; }}
-    .arrow{stroke: rgba(255,255,255,.25); stroke-width: 2; marker-end:url(#arrowHead); opacity:.8;}
+    .node{
+      position:absolute;
+      width:120px;
+      height:80px;
+      background:#101114;
+      border:1px solid #242633;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
+    }
+    .node img{max-height:42px}
 
-    .details{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.02);
-      padding:14px;
-      display:flex; flex-direction:column; gap:10px;
-    }
-    .detailTop{
-      display:flex; gap:12px; align-items:center;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .detailLogo{
-      width:76px; height:50px;
-      border-radius:12px;
-      border:1px dashed rgba(255,255,255,.18);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      background:rgba(0,0,0,.20);
-      flex:0 0 auto;
-    }
-    .detailLogo img{max-width:100%; max-height:100%; object-fit:contain}
-    .detailTop h3{margin:0; font-size:16px}
-    .detailTop p{margin:2px 0 0; color:var(--muted); font-size:13px}
-    .detailBody{
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .detailBody .bul{margin:0; padding-left:18px; color:var(--muted); font-size:13px}
-    .detailBody .bul li{margin:8px 0}
-    .valueBox{
-      border:1px solid rgba(25,195,125,.35);
-      background: rgba(25,195,125,.08);
-      border-radius:14px;
-      padding:12px;
-    }
-    .valueBox strong{display:block}
-    .valueBox span{display:block; color:rgba(246,247,251,.82); font-size:13px; margin-top:4px}
+    /* Positions */
+    .n1{top:-10px;left:170px}
+    .n2{top:90px;right:-10px}
+    .n3{bottom:90px;right:-10px}
+    .n4{bottom:-10px;left:170px}
+    .n5{bottom:90px;left:-10px}
+    .n6{top:90px;left:-10px}
 
-    .tabs{display:flex; gap:8px; flex-wrap:wrap}
-    .tab{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--muted);
-      padding:9px 10px;
-      border-radius:999px;
+    footer{
+      margin-top:50px;
+      border-top:1px solid #242633;
+      padding-top:20px;
       font-size:12px;
-      cursor:pointer;
-      user-select:none;
+      color:#8b90a0;
     }
-    .tab.active{
-      background: rgba(200,16,46,.15);
-      border-color: rgba(200,16,46,.35);
-      color: var(--text);
-      font-weight:800;
-    }
-
-    /* Partner hub */
-    .partnerGrid{
-      display:grid; grid-template-columns: repeat(3, 1fr);
-      gap:14px; margin-top:12px;
-    }
-    @media (max-width: 980px){ .partnerGrid{grid-template-columns:1fr} }
-    .partnerCard{padding:16px; display:flex; flex-direction:column; gap:10px;}
-    .partnerHeader{
-      display:flex; gap:12px; align-items:center;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .partnerLogo{
-      width:78px; height:52px;
-      border-radius:12px;
-      border:1px dashed rgba(255,255,255,.18);
-      background:rgba(0,0,0,.20);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .partnerLogo img{max-width:100%; max-height:100%; object-fit:contain}
-    .partnerHeader b{display:block}
-    .partnerHeader span{display:block; font-size:12px; color:var(--muted)}
-    .partnerBody{color:var(--muted); font-size:13px}
-    .partnerActions{display:flex; gap:10px; flex-wrap:wrap}
-    .miniBtn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:9px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:800;
-      font-size:12px;
-    }
-    .miniBtn:hover{background:rgba(255,255,255,.05)}
-
-    /* Handoff sections */
-    .handoff{margin-top:14px; padding:18px;}
-    .handoffTop{
-      display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;
-      border-bottom:1px solid var(--line);
-      padding-bottom:14px;
-      margin-bottom:14px;
-    }
-    .handoffLeft{display:flex; gap:12px; align-items:center;}
-    .handoffLogo{
-      width:92px; height:60px;
-      border-radius:14px;
-      border:1px dashed rgba(255,255,255,.18);
-      background:rgba(0,0,0,.20);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-    }
-    .handoffLogo img{max-width:100%; max-height:100%; object-fit:contain}
-    .handoffTitle h3{margin:0; font-size:18px}
-    .handoffTitle p{margin:3px 0 0; color:var(--muted); font-size:13px; max-width:80ch}
-    .handoffCols{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
-    @media (max-width: 980px){ .handoffCols{grid-template-columns:1fr} }
-    .box{
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .box h4{margin:0 0 8px; font-size:14px}
-    .box ul{margin:0; padding-left:18px; color:var(--muted); font-size:13px}
-    .box li{margin:8px 0}
-
-    .footer{
-      margin-top:24px;
-      border-top:1px solid var(--line);
-      padding-top:18px;
-      color:var(--muted2);
-      font-size:12px;
-      display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;
-    }
-    .legal{max-width:90ch}
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <div class="topbar">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Roofing Revenue Systems<span style="opacity:.65">™</span></span>
-        <span class="badge"><span class="dot" style="width:6px;height:6px;background:var(--ok)"></span>Bottom line impact — Day 1</span>
-      </div>
+  <header>
+    <div class="brand">Roofing Revenue Systems™</div>
+    <a class="cta" href="#contact">Book Strategy Call</a>
+  </header>
 
-      <div class="nav">
-        <a href="#cycle">Cycle</a>
-        <a href="#handoff-hub">Handoff</a>
-        <a href="#contact">Book Call</a>
-        <a class="btn" href="#contact">Get a 15-min Strategy Call</a>
-      </div>
-    </div>
+  <section class="hero">
+    <div class="card">
+      <h1>Raise your bottom line — Day 1.</h1>
+      <p>
+        Roofing Revenue Systems integrates lead intelligence, claims strategy,
+        funding control, and service expansion into one repeatable profit system.
+      </p>
 
-    <div class="hero">
-      <div class="card heroLeft">
-        <h1>Raise your bottom line Day 1.</h1>
-        <p class="sub">
-          We help roofing, exterior, and claims-driven companies increase close rates, settlement outcomes, and cash velocity by integrating
-          <b>lead intelligence</b>, <b>claims strategy</b>, <b>controlled disbursement</b>, and <b>service expansion</b> into one system.
-        </p>
-
-        <div class="heroActions">
-          <a class="btn" href="#contact">Book a Strategy Call</a>
-          <a class="btn secondary" href="#handoff-hub">Partner Handoff Hub</a>
-          <a class="btn secondary" href="#cycle">Cycle Diagram</a>
-        </div>
-
-        <div class="kpis">
-          <div class="kpi"><strong>Immediate Value</strong><span>Higher close rates + stronger claim posture + faster cash velocity</span></div>
-          <div class="kpi"><strong>Minimal Investment</strong><span>Start with advisory + one activation (PayPixl rail or claims tightening)</span></div>
-          <div class="kpi"><strong>Scalable Upside</strong><span>Peak 301 revenue + internal lead engine + partner ecosystems</span></div>
-        </div>
-
-        <p class="small" style="margin-top:14px">
-          Disclosure: We may receive compensation from enablement partnerships (referral/revenue share) where permitted. Alignment is disclosed upfront.
-        </p>
-      </div>
-
-      <div class="card heroRight">
-        <div class="panel" style="padding:16px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02)">
-          <div class="pillRow">
-            <span class="pill"><b>Lead Intelligence</b> → PayPixl</span>
-            <span class="pill"><b>Claims Strategy</b> → 5th Element</span>
-            <span class="pill"><b>Legal Escalation</b> → WEK Law</span>
-            <span class="pill"><b>Pricing</b> → TradeGauge.ai</span>
-            <span class="pill"><b>Production Proof</b> → Go Dawgs! Roof Roof</span>
-            <span class="pill"><b>Service Expansion</b> → Peak 301 / Peak Pros</span>
-          </div>
-
-          <div class="callout">
-            <b>Day-1 Bottom Line Move:</b>
-            Install a conversion rail (QR + “your roof” experience) and tighten claim/scope posture so money comes in faster, cleaner, and larger.
-          </div>
-
-          <div class="logos">
-            <div class="logoTile"><img alt="PayPixl" src="assets/paypixl.jpg" /></div>
-            <div class="logoTile"><img alt="Peak Pros" src="assets/peak-pros.jpg" /></div>
-            <div class="logoTile"><img alt="Go Dawgs Roof Roof" src="assets/gdrr.jpg" /></div>
-            <div class="logoTile"><img alt="5th Element Adjusting" src="assets/5th-element.jpg" /></div>
-            <div class="logoTile"><img alt="Peak 301" src="assets/peak301.png" /></div>
-            <div class="logoTile"><img alt="WEK Law Group" src="assets/wek.jpg" /></div>
-            <div class="logoTile"><img alt="TradeGauge.ai" src="assets/tradegauge.jpg" /></div>
-            <div class="logoTile" style="color:var(--muted2); font-size:12px; text-align:center; padding:12px">
-              IINK Pay<br/><span style="opacity:.75">(logo TBD)</span>
-            </div>
-          </div>
-
-          <p class="small" style="margin:12px 0 0">
-            This page is the hub. Each partner has a handoff synopsis with a clean external link.
-          </p>
-        </div>
+      <div class="logo-grid">
+        <div class="logo"><img src="assets/paypixl.jpg" alt="PayPixl"></div>
+        <div class="logo"><img src="assets/5th-element.jpeg" alt="5th Element"></div>
+        <div class="logo"><img src="assets/wek.jpg" alt="WEK Law"></div>
+        <div class="logo"><img src="assets/tradegauge.jpg" alt="TradeGauge"></div>
+        <div class="logo"><img src="assets/peak301.png" alt="Peak 301"></div>
+        <div class="logo"><img src="assets/peak-pros.jpg" alt="Peak Pros"></div>
+        <div class="logo"><img src="assets/gdrr.jpg" alt="Go Dawgs Roof Roof"></div>
       </div>
     </div>
 
-    <!-- CYCLE -->
-    <div id="cycle" class="section">
-      <div class="card cycleCard">
-        <div class="cycleHeader">
-          <div>
-            <h2>The Revenue Cycle (Profit Lift at Every Step)</h2>
-            <div class="small">Click a node. We show how you win at each stage: claim origination → settlement → funding control → Peak 301 expansion → internal PayPixl lead engine.</div>
-          </div>
-          <div class="tabs">
-            <div class="tab active" data-mode="auto" onclick="setCycleMode('auto')">Auto-cycle</div>
-            <div class="tab" data-mode="manual" onclick="setCycleMode('manual')">Manual</div>
-          </div>
-        </div>
+    <div class="card">
+      <h3>What this system does</h3>
+      <p>• Higher close rates<br>
+         • Stronger claim posture<br>
+         • Faster collections<br>
+         • New recurring revenue</p>
+    </div>
+  </section>
 
-        <div class="cycleLayout">
-          <div class="diagram">
-            <svg viewBox="0 0 640 520" role="img" aria-label="Revenue cycle diagram">
-              <defs>
-                <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-                  <path d="M0,0 L12,6 L0,12 Z" fill="rgba(255,255,255,.35)"></path>
-                </marker>
-              </defs>
+  <section class="cycle">
+    <h2>The Roofing Revenue Cycle</h2>
 
-              <circle cx="320" cy="260" r="165" class="ring"></circle>
-              <circle cx="320" cy="260" r="165" class="ring2"></circle>
-
-              <path class="arrow" d="M320 95 C420 105 500 160 525 250"></path>
-              <path class="arrow" d="M525 250 C540 345 490 420 400 450"></path>
-              <path class="arrow" d="M400 450 C305 485 220 465 155 395"></path>
-              <path class="arrow" d="M155 395 C95 320 95 240 135 165"></path>
-              <path class="arrow" d="M135 165 C185 105 245 85 320 95"></path>
-
-              <g>
-                <circle cx="320" cy="260" r="82" fill="rgba(200,16,46,.12)" stroke="rgba(200,16,46,.30)" stroke-width="1.5"></circle>
-                <text x="320" y="252" text-anchor="middle" class="nodeLabel" style="font-size:15px">Roofing Revenue</text>
-                <text x="320" y="272" text-anchor="middle" class="nodeSub">System Integration</text>
-                <text x="320" y="295" text-anchor="middle" class="nodeSub">Day-1 Profit Lift</text>
-              </g>
-
-              <g class="node" onclick="selectNode(0)"><circle id="n0" class="nodeCircle" cx="320" cy="95" r="46"></circle><text x="320" y="87" text-anchor="middle" class="nodeLabel">Claim</text><text x="320" y="104" text-anchor="middle" class="nodeSub">Origination</text></g>
-              <g class="node" onclick="selectNode(1)"><circle id="n1" class="nodeCircle" cx="525" cy="250" r="46"></circle><text x="525" y="242" text-anchor="middle" class="nodeLabel">Settlement</text><text x="525" y="259" text-anchor="middle" class="nodeSub">Strategy</text></g>
-              <g class="node" onclick="selectNode(2)"><circle id="n2" class="nodeCircle" cx="400" cy="450" r="46"></circle><text x="400" y="442" text-anchor="middle" class="nodeLabel">Funding</text><text x="400" y="459" text-anchor="middle" class="nodeSub">Control</text></g>
-              <g class="node" onclick="selectNode(3)"><circle id="n3" class="nodeCircle" cx="155" cy="395" r="46"></circle><text x="155" y="387" text-anchor="middle" class="nodeLabel">Peak 301</text><text x="155" y="404" text-anchor="middle" class="nodeSub">Rejuv.</text></g>
-              <g class="node" onclick="selectNode(4)"><circle id="n4" class="nodeCircle" cx="135" cy="165" r="46"></circle><text x="135" y="157" text-anchor="middle" class="nodeLabel">Lead</text><text x="135" y="174" text-anchor="middle" class="nodeSub">Engine</text></g>
-            </svg>
-          </div>
-
-          <div class="details">
-            <div class="detailTop">
-              <div class="detailLogo" id="detailLogo"></div>
-              <div>
-                <h3 id="detailTitle">Claim Origination</h3>
-                <p id="detailSubtitle">How we position the claim from day one to reduce leakage and increase recoverable scope.</p>
-              </div>
-            </div>
-
-            <div class="detailBody">
-              <ul class="bul" id="detailBullets"></ul>
-            </div>
-
-            <div class="valueBox">
-              <strong id="detailValueTitle">Day-1 Bottom Line Impact</strong>
-              <span id="detailValueText"></span>
-            </div>
-
-            <a class="btn" id="detailCta" href="#handoff-hub">Open Partner Handoff Hub</a>
-          </div>
-        </div>
-      </div>
+    <div class="cycle-ring">
+      <div class="node n1"><img src="assets/paypixl.jpg"></div>
+      <div class="node n2"><img src="assets/5th-element.jpeg"></div>
+      <div class="node n3"><img src="assets/wek.jpg"></div>
+      <div class="node n4"><img src="assets/peak301.png"></div>
+      <div class="node n5"><img src="assets/peak-pros.jpg"></div>
+      <div class="node n6"><img src="assets/gdrr.jpg"></div>
     </div>
 
-    <!-- PARTNER HANDOFF HUB -->
-    <div id="handoff-hub" class="section">
-      <div class="card panel">
-        <h2>Partner Handoff Hub</h2>
-        <p>Click <b>Synopsis</b> for an on-page handoff summary. Click <b>Visit site</b> for the external link.</p>
+    <p>
+      Lead Intelligence → Claim Positioning → Legal Escalation →
+      Rejuvenation Revenue → White-Label Expansion → Proven Production
+    </p>
+  </section>
 
-        <div class="partnerGrid">
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="PayPixl" src="assets/paypixl.jpg"></div>
-              <div><b>PayPixl</b><span>Lead intelligence + conversion rail</span></div>
-            </div>
-            <div class="partnerBody">Drone/roof data → interactive “your roof” experience → QR mail + door hangers + yard signs for immediate close-rate lift.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-paypixl">Synopsis</a>
-              <a class="miniBtn" href="https://paypixl.io/" target="_blank" rel="noreferrer">Visit site</a>
-            </div>
-          </div>
+  <section id="contact" class="card" style="margin-top:40px">
+    <h2>Book a Strategy Call</h2>
+    <p>Replace the links below with your real contact info.</p>
+    <a class="cta" href="https://calendly.com/YOUR-LINK" target="_blank">Open Calendly</a>
+  </section>
 
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="5th Element" src="assets/5th-element.jpg"></div>
-              <div><b>5th Element Adjusting</b><span>Claims strategy + scope posture</span></div>
-            </div>
-            <div class="partnerBody">Claim origination systems + supplement cadence that reduce leakage, improve outcomes, and speed money.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-fea">Synopsis</a>
-              <a class="miniBtn" href="https://www.feaclaims.com/" target="_blank" rel="noreferrer">Visit site</a>
-            </div>
-          </div>
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> Roofing Revenue Systems™  
+    <br>Not a law firm. Public adjusting only where licensed.
+  </footer>
 
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="WEK Law" src="assets/wek.jpg"></div>
-              <div><b>WEK Law Group</b><span>Legal escalation pathway</span></div>
-            </div>
-            <div class="partnerBody">When negotiation stalls, we provide a structured escalation pathway to counsel (as appropriate) to move claims forward.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-wek">Synopsis</a>
-              <a class="miniBtn" href="https://weklaw.com/" target="_blank" rel="noreferrer">Visit site</a>
-            </div>
-          </div>
-
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="TradeGauge.ai" src="assets/tradegauge.jpg"></div>
-              <div><b>TradeGauge.ai</b><span>Pricing + margin intelligence</span></div>
-            </div>
-            <div class="partnerBody">Stop underbidding. Protect gross profit using pricing intelligence and estimating discipline aligned to your market.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-tradegauge">Synopsis</a>
-              <a class="miniBtn" href="https://www.tradegauge.ai/" target="_blank" rel="noreferrer">Visit site</a>
-            </div>
-          </div>
-
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="Go Dawgs Roof Roof" src="assets/gdrr.jpg"></div>
-              <div><b>Go Dawgs! Roof Roof</b><span>Production credibility</span></div>
-            </div>
-            <div class="partnerBody">This system is built from real production, real claims outcomes, real collections, and real margin protection in the field.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-gdrr">Synopsis</a>
-              <a class="miniBtn" href="https://www.godawgsroofroof.com/" target="_blank" rel="noreferrer">Visit site</a>
-            </div>
-          </div>
-
-          <div class="card partnerCard">
-            <div class="partnerHeader">
-              <div class="partnerLogo"><img alt="Peak 301" src="assets/peak301.png"></div>
-              <div><b>Peak 301 / Peak Pros</b><span>Rejuvenation + white-label revenue</span></div>
-            </div>
-            <div class="partnerBody">Add high-margin rejuvenation, leverage territory rights, and white-label the service to partner trades for revenue share.</div>
-            <div class="partnerActions">
-              <a class="miniBtn" href="#handoff-peak301">Synopsis</a>
-              <a class="miniBtn" href="#contact">Request Access</a>
-            </div>
-          </div>
-        </div> <!-- end .partnerGrid -->
-
-        <div class="callout">
-          <b>How we connect affiliates:</b> audit → activation plan → onboarding → KPIs. We don’t just link out — we install the workflow.
-        </div>
-
-      </div> <!-- end .card.panel -->
-    </div> <!-- end #handoff-hub -->
-
-    <!-- HANDOFF SECTIONS -->
-    <div id="handoff-paypixl" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="PayPixl" src="assets/paypixl.jpg"></div>
-          <div class="handoffTitle"><h3>PayPixl — Lead Intelligence & Conversion Rail</h3><p>Interactive “your roof” leads + QR-based neighborhood saturation to lift close rates and reduce lead cost.</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="https://paypixl.io/" target="_blank" rel="noreferrer">Visit PayPixl</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>What we do</h4><ul><li>Build drone → interactive lead workflow</li><li>Create QR mailers, door hangers, yard sign kits</li><li>Install conversion rail (follow-up + CRM handoff)</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>Higher close rate from personalization</li><li>Lower lead cost by internalizing acquisition</li><li>Neighborhood compounding ROI</li></ul></div>
-      </div>
-    </div></div>
-
-    <div id="handoff-fea" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="5th Element" src="assets/5th-element.jpg"></div>
-          <div class="handoffTitle"><h3>5th Element Adjusting — Claims Strategy & Scope Posture</h3><p>Systems that reduce leakage, improve supplement strength, and keep timelines tight through repeatable documentation.</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="https://www.feaclaims.com/" target="_blank" rel="noreferrer">Visit FEA Claims</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>What we install</h4><ul><li>Origination standards (photos, narrative, scope logic)</li><li>Supplement cadence + evidence packaging</li><li>Escalation decision tree</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>Cleaner files = less carrier friction</li><li>Stronger recoverable scope posture</li><li>Faster momentum → faster money</li></ul></div>
-      </div>
-    </div></div>
-
-    <div id="handoff-wek" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="WEK Law" src="assets/wek.jpg"></div>
-          <div class="handoffTitle"><h3>WEK Law Group — Legal Escalation Pathway</h3><p>When claims stall, we provide a clean handoff to counsel so the homeowner can exercise rights (where appropriate).</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="https://weklaw.com/" target="_blank" rel="noreferrer">Visit WEK Law</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>When it fits</h4><ul><li>Coverage disputes</li><li>Unreasonable delay</li><li>Bad faith indicators</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>Clear escalation path reduces stuck time</li><li>Cleaner documentation improves posture</li><li>More leverage when warranted</li></ul></div>
-      </div>
-    </div></div>
-
-    <div id="handoff-tradegauge" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="TradeGauge.ai" src="assets/tradegauge.jpg"></div>
-          <div class="handoffTitle"><h3>TradeGauge.ai — Pricing & Margin Intelligence</h3><p>Pricing intelligence that helps you stop underbidding and protect gross profit in your market.</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="https://www.tradegauge.ai/" target="_blank" rel="noreferrer">Visit TradeGauge.ai</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>What we do</h4><ul><li>Install margin guardrails</li><li>Estimate review cadence</li><li>Production cost alignment</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>Immediate underpricing reduction</li><li>Predictable job profitability</li><li>Better forecasting</li></ul></div>
-      </div>
-    </div></div>
-
-    <div id="handoff-gdrr" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="Go Dawgs Roof Roof" src="assets/gdrr.jpg"></div>
-          <div class="handoffTitle"><h3>Go Dawgs! Roof Roof — Production Proof</h3><p>Our system is built from real field production, real claims outcomes, and real collections — not theory.</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="https://www.godawgsroofroof.com/" target="_blank" rel="noreferrer">Visit GDRR</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>What you gain</h4><ul><li>Battle-tested ops + docs</li><li>Sales positioning + field control</li><li>Margin protection discipline</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>Fewer mistakes/disputes</li><li>Faster collections</li><li>Better customer confidence</li></ul></div>
-      </div>
-    </div></div>
-
-    <div id="handoff-peak301" class="section"><div class="card handoff">
-      <div class="handoffTop">
-        <div class="handoffLeft">
-          <div class="handoffLogo"><img alt="Peak 301" src="assets/peak301.png"></div>
-          <div class="handoffTitle"><h3>Peak 301 / Peak Pros — Rejuvenation & White-Label Revenue</h3><p>Procurement + territory leverage + white-label partner model to create recurring revenue and margin expansion.</p></div>
-        </div>
-        <div class="heroActions"><a class="btn secondary" href="#handoff-hub">Back to Hub</a><a class="btn" href="#contact">Request Access</a></div>
-      </div>
-      <div class="handoffCols">
-        <div class="box"><h4>What we build</h4><ul><li>Drum/territory procurement plan</li><li>White-label partner program</li><li>Revenue share structure</li></ul></div>
-        <div class="box"><h4>Day-1 impact</h4><ul><li>High-margin add-on service</li><li>Recurring revenue from partners</li><li>Cross-sell into existing base</li></ul></div>
-      </div>
-    </div></div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="section">
-      <div class="card panel">
-        <h2>Book a Strategy Call</h2>
-        <p>Replace the Calendly link + email with your real ones.</p>
-        <div class="heroActions">
-          <a class="btn" href="https://calendly.com/YOUR-LINK-HERE" target="_blank" rel="noreferrer">Open Calendly</a>
-          <a class="btn secondary" href="mailto:YOUR@EMAIL.COM?subject=Strategy%20Call%20Request&body=Name%3A%0ACompany%3A%0APhone%3A%0AWhat%20are%20you%20trying%20to%20fix%3F%0A">Email Us</a>
-        </div>
-
-        <div class="footer">
-          <div class="legal">
-            <b>Disclosure & Compliance:</b> We are not a law firm and do not provide legal advice. Public adjusting services are offered only where properly licensed/permitted.
-            Some enablement partnerships may include referral fees or revenue share; these are disclosed. Third-party logos remain property of their respective owners.
-          </div>
-          <div>© <span id="yr"></span> Roofing Revenue Systems™</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    const NODE_LOGOS = {
-      fea: "assets/5th-element.jpg",
-      paypixl: "assets/paypixl.jpg",
-      peak301: "assets/peak301.png",
-      gdrr: "assets/gdrr.jpg",
-      wek: "assets/wek.jpg",
-      tradegauge: "assets/tradegauge.jpg",
-    };
-
-    const NODES = [
-      {
-        title:"Claim Origination",
-        subtitle:"Position the claim from Day 1 so scope is cleaner, recoverable, and faster.",
-        logo:NODE_LOGOS.fea,
-        bullets:[
-          "<b>Documentation posture:</b> photos, factual narrative, and scope logic carriers respond to.",
-          "<b>Estimating discipline:</b> reduce missed line items and underpayment.",
-          "<b>Process control:</b> timelines, touchpoints, and decision-tree to avoid delays."
-        ],
-        valueTitle:"Day-1 Bottom Line Impact",
-        valueText:"Reduce leakage and speed carrier momentum by installing a repeatable claim positioning workflow.",
-        ctaText:"Handoff: 5th Element Adjusting",
-        ctaHref:"#handoff-fea"
-      },
-      {
-        title:"Settlement Strategy",
-        subtitle:"Increase recoverable scope with stronger supplements and a cleaner communication rail.",
-        logo:NODE_LOGOS.fea,
-        bullets:[
-          "<b>Supplement cadence:</b> what to submit, when, and how to win line items.",
-          "<b>Carrier friction reduction:</b> cleaner evidence packages = fewer re-inspections.",
-          "<b>Escalation path:</b> negotiate → PA support → counsel where appropriate."
-        ],
-        valueTitle:"Immediate Value",
-        valueText:"Improve settlement outcomes by tightening scope logic and supplement rhythm.",
-        ctaText:"Handoff: WEK Legal Escalation",
-        ctaHref:"#handoff-wek"
-      },
-      {
-        title:"Funding Control & Disbursement",
-        subtitle:"Turn settlement money into controlled production + cashflow (IINK Pay integration).",
-        logo:NODE_LOGOS.gdrr,
-        bullets:[
-          "<b>Milestone releases:</b> reduce disputes and cash chaos.",
-          "<b>Pay subs cleanly:</b> improve production velocity and vendor trust.",
-          "<b>Audit trail:</b> documentation protects contractor + homeowner."
-        ],
-        valueTitle:"Cash Velocity",
-        valueText:"Improve collections and reduce cash chaos with controlled disbursement workflows.",
-        ctaText:"Back to Partner Hub",
-        ctaHref:"#handoff-hub"
-      },
-      {
-        title:"Peak 301 Rejuvenation + White-Label Revenue",
-        subtitle:"Add high-margin service revenue with territory leverage and partner revenue share.",
-        logo:NODE_LOGOS.peak301,
-        bullets:[
-          "<b>Procurement path:</b> drums/territories and deployment planning.",
-          "<b>White-label model:</b> share revenue with roofers, gutter, power-wash partners.",
-          "<b>Territory leverage:</b> turn exclusivity into recurring revenue."
-        ],
-        valueTitle:"New Revenue Stream",
-        valueText:"Create immediate service expansion revenue without building a new roofing division.",
-        ctaText:"Handoff: Peak 301 / Peak Pros",
-        ctaHref:"#handoff-peak301"
-      },
-      {
-        title:"Internal Lead Engine (7× ROI Rail)",
-        subtitle:"Control lead cost, raise conversion, and build neighborhood saturation.",
-        logo:NODE_LOGOS.paypixl,
-        bullets:[
-          "<b>Interactive lead:</b> homeowner sees <i>their roof</i> (high intent).",
-          "<b>QR asset kit:</b> mailers + door hangers + yard signs matched to addresses.",
-          "<b>In-house control:</b> reduce reliance on overpriced third-party leads."
-        ],
-        valueTitle:"Day-1 Profit Lift",
-        valueText:"Higher close rate + lower lead cost = immediate bottom-line improvement with minimal spend.",
-        ctaText:"Handoff: PayPixl",
-        ctaHref:"#handoff-paypixl"
-      }
-    ];
-
-    let activeIndex=0, mode="auto", timer=null;
-
-    function setCycleMode(next){
-      mode=next;
-      document.querySelectorAll(".tab[data-mode]").forEach(t=>{
-        t.classList.toggle("active", t.dataset.mode===next);
-      });
-      if(mode==="auto") startAuto(); else stopAuto();
-    }
-    function startAuto(){ stopAuto(); timer=setInterval(()=>selectNode((activeIndex+1)%NODES.length,true),4200); }
-    function stopAuto(){ if(timer){clearInterval(timer);timer=null;} }
-
-    function selectNode(idx, fromAuto=false){
-      activeIndex=idx;
-      for(let i=0;i<5;i++){
-        const c=document.getElementById("n"+i);
-        if(c) c.classList.toggle("active", i===idx);
-      }
-      const d=NODES[idx];
-      document.getElementById("detailTitle").textContent=d.title;
-      document.getElementById("detailSubtitle").textContent=d.subtitle;
-
-      const ul=document.getElementById("detailBullets");
-      ul.innerHTML="";
-      d.bullets.forEach(b=>{
-        const li=document.createElement("li");
-        li.innerHTML=b;
-        ul.appendChild(li);
-      });
-
-      document.getElementById("detailValueTitle").textContent=d.valueTitle;
-      document.getElementById("detailValueText").textContent=d.valueText;
-
-      const logoBox=document.getElementById("detailLogo");
-      logoBox.innerHTML="";
-      const img=document.createElement("img");
-      img.src=d.logo;
-      img.alt=d.title+" logo";
-      logoBox.appendChild(img);
-
-      const cta=document.getElementById("detailCta");
-      cta.textContent=d.ctaText;
-      cta.href=d.ctaHref;
-
-      if(mode==="auto" && !fromAuto) startAuto();
-    }
-
-    document.getElementById("yr").textContent=new Date().getFullYear();
-    selectNode(0,true);
-    startAuto();
-  </script>
+</div>
 </body>
 </html>
