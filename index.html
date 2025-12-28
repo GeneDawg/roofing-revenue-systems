@@ -1,0 +1,937 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roofing Revenue Systems™ | Lead Intelligence • Claims Strategy • Scalable Revenue</title>
+  <meta name="description" content="Raise your bottom line Day 1. We integrate lead intelligence, claims strategy, settlement workflows, and rejuvenation revenue to create immediate value for roofing and exterior companies." />
+
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#101114;
+      --panel2:#15161c;
+      --text:#f6f7fb;
+      --muted:#b9bdc9;
+      --muted2:#8b90a0;
+      --line:#242633;
+      --accent:#C8102E; /* UGA red */
+      --accent2:#ffffff;
+      --ok:#19c37d;
+      --warn:#f5c542;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:14px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(900px 500px at 20% -10%, rgba(200,16,46,.25), transparent 60%),
+                  radial-gradient(700px 500px at 95% 10%, rgba(255,255,255,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.35;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 72px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background:rgba(16,17,20,.65); backdrop-filter: blur(10px);
+      position:sticky; top:12px; z-index:20;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line); background:rgba(21,22,28,.8); font-size:12px; color:var(--muted)
+    }
+    .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{font-size:13px; text-decoration:none; padding:8px 10px; border-radius:999px; border:1px solid transparent; color:var(--muted)}
+    .nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.04)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      background: linear-gradient(135deg, rgba(200,16,46,1), rgba(200,16,46,.75));
+      color:#fff; text-decoration:none;
+      padding:11px 14px; border-radius:999px; font-weight:800; letter-spacing:.2px;
+      border:1px solid rgba(255,255,255,.15);
+      box-shadow: 0 10px 25px rgba(200,16,46,.18);
+      white-space:nowrap;
+    }
+    .btn.secondary{
+      background:rgba(255,255,255,.06); color:var(--text); border:1px solid var(--line);
+      box-shadow:none; font-weight:700;
+    }
+    .hero{
+      margin-top:20px;
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr; }
+      .topbar{position:relative; top:auto}
+    }
+    .card{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(16,17,20,.85), rgba(16,17,20,.65));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .heroLeft{padding:26px 22px}
+    h1{
+      margin:0 0 10px; font-size:44px; line-height:1.02; letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted); font-size:16px; margin:0 0 16px;
+      max-width:58ch;
+    }
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px}
+    @media (max-width: 640px){ .kpis{grid-template-columns:1fr} }
+    .kpi{
+      padding:12px 12px;
+      border:1px solid var(--line); border-radius:var(--radius2);
+      background:rgba(255,255,255,.03);
+    }
+    .kpi strong{display:block; font-size:14px}
+    .kpi span{display:block; font-size:12px; color:var(--muted)}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .small{font-size:12px; color:var(--muted2)}
+    .heroRight{padding:18px 18px 14px; display:flex; flex-direction:column; gap:12px}
+    .pillRow{display:flex; flex-wrap:wrap; gap:8px}
+    .pill{
+      padding:8px 10px; border-radius:999px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03); font-size:12px; color:var(--muted);
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .pill b{color:var(--text); font-weight:800}
+    .section{margin-top:22px}
+    .section h2{margin:0 0 10px; font-size:22px}
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media (max-width: 980px){ .grid2{grid-template-columns:1fr} }
+    .panel{padding:18px}
+    .panel p{margin:0 0 10px; color:var(--muted)}
+    .list{margin:10px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .list li{
+      padding:12px; border-radius:var(--radius2); border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .ico{
+      width:26px; height:26px; border-radius:8px;
+      background:rgba(200,16,46,.20);
+      border:1px solid rgba(200,16,46,.35);
+      flex:0 0 auto;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; color:#fff; font-size:12px;
+    }
+    .muted{color:var(--muted)}
+    .logos{
+      display:grid; grid-template-columns: repeat(4,1fr); gap:10px;
+      margin-top:10px;
+    }
+    @media (max-width: 720px){ .logos{grid-template-columns: repeat(2,1fr);} }
+    .logoTile{
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius:14px; padding:12px;
+      background:rgba(255,255,255,.02);
+      display:flex; align-items:center; justify-content:center;
+      height:70px;
+      color:var(--muted2);
+      text-align:center;
+      font-size:12px;
+    }
+    .logoTile img{max-height:44px; max-width:100%; object-fit:contain}
+    .cycleWrap{
+      position:relative;
+      display:grid; grid-template-columns: 1fr; gap:12px;
+    }
+    .cycleCard{padding:18px}
+    .cycleHeader{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .cycleHeader .small{max-width:80ch}
+    .cycleLayout{
+      display:grid; grid-template-columns: 1.05fr .95fr; gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){ .cycleLayout{grid-template-columns:1fr} }
+    /* Cycle diagram */
+    .diagram{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      padding:14px;
+      min-height:420px;
+      display:flex; align-items:center; justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+    svg{max-width:100%; height:auto}
+    .node{
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
+      cursor:pointer;
+    }
+    .nodeCircle{
+      fill: rgba(16,17,20,.92);
+      stroke: rgba(255,255,255,.18);
+      stroke-width: 1.25;
+    }
+    .nodeCircle.active{
+      stroke: rgba(200,16,46,.95);
+      stroke-width: 2.2;
+    }
+    .nodeLabel{
+      fill: var(--text);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .1px;
+    }
+    .nodeSub{
+      fill: rgba(185,189,201,.95);
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .ring{
+      fill:none;
+      stroke: rgba(255,255,255,.10);
+      stroke-width: 18;
+    }
+    .ring2{
+      fill:none;
+      stroke: rgba(200,16,46,.20);
+      stroke-width: 4;
+      stroke-dasharray: 6 10;
+      animation: dash 10s linear infinite;
+      opacity:.85;
+    }
+    @keyframes dash{
+      to { stroke-dashoffset: -200; }
+    }
+    .arrow{
+      stroke: rgba(255,255,255,.25);
+      stroke-width: 2;
+      marker-end:url(#arrowHead);
+      opacity:.8;
+    }
+    .details{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      padding:14px;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .detailTop{
+      display:flex; gap:12px; align-items:center;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      padding:12px;
+    }
+    .detailLogo{
+      width:64px; height:44px;
+      border-radius:12px;
+      border:1px dashed rgba(255,255,255,.18);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      background:rgba(0,0,0,.20);
+      flex:0 0 auto;
+    }
+    .detailLogo img{max-width:100%; max-height:100%; object-fit:contain}
+    .detailLogo span{font-size:11px; color:var(--muted2); text-align:center; padding:6px}
+    .detailTop h3{margin:0; font-size:16px}
+    .detailTop p{margin:2px 0 0; color:var(--muted); font-size:13px}
+    .detailBody{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      padding:12px;
+    }
+    .detailBody .bul{margin:0; padding-left:18px; color:var(--muted); font-size:13px}
+    .detailBody .bul li{margin:8px 0}
+    .valueBox{
+      border:1px solid rgba(25,195,125,.35);
+      background: rgba(25,195,125,.08);
+      border-radius:14px;
+      padding:12px;
+    }
+    .valueBox strong{display:block}
+    .valueBox span{display:block; color:rgba(246,247,251,.82); font-size:13px; margin-top:4px}
+    .tabs{display:flex; gap:8px; flex-wrap:wrap}
+    .tab{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:9px 10px;
+      border-radius:999px;
+      font-size:12px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .tab.active{
+      background: rgba(200,16,46,.15);
+      border-color: rgba(200,16,46,.35);
+      color: var(--text);
+      font-weight:800;
+    }
+    .pricing{
+      display:grid; grid-template-columns: repeat(3,1fr); gap:14px;
+      margin-top:12px;
+    }
+    @media (max-width: 980px){ .pricing{grid-template-columns:1fr} }
+    .priceCard{padding:18px; position:relative}
+    .priceCard h3{margin:0 0 6px}
+    .price{
+      font-size:30px; font-weight:900; margin:0;
+      letter-spacing:-.5px;
+    }
+    .price small{font-size:13px; color:var(--muted)}
+    .priceList{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:8px}
+    .priceList li{
+      display:flex; gap:10px; align-items:flex-start;
+      color:var(--muted); font-size:13px;
+    }
+    .check{
+      width:18px; height:18px; border-radius:6px;
+      background:rgba(25,195,125,.18);
+      border:1px solid rgba(25,195,125,.35);
+      display:flex; align-items:center; justify-content:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .check:before{content:"✓"; font-weight:900; color:rgba(25,195,125,1); font-size:12px}
+    .callout{
+      border:1px solid rgba(200,16,46,.35);
+      background: rgba(200,16,46,.08);
+      border-radius: var(--radius);
+      padding:14px;
+      margin-top:12px;
+      color: rgba(246,247,251,.90);
+    }
+    .footer{
+      margin-top:24px;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      color:var(--muted2);
+      font-size:12px;
+      display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;
+    }
+    .legal{max-width:90ch}
+    .hidden{display:none !important}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Roofing Revenue Systems<span style="opacity:.65">™</span></span>
+        <span class="badge"><span class="dot" style="width:6px;height:6px;background:var(--ok)"></span>Bottom line impact — Day 1</span>
+      </div>
+
+      <div class="nav">
+        <a href="#cycle">Cycle</a>
+        <a href="#offerings">Offerings</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Book Call</a>
+        <a class="btn" href="#contact">Get a 15-min Strategy Call</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card heroLeft">
+        <h1>Raise your bottom line Day 1.</h1>
+        <p class="sub">
+          We help roofing, exterior, and claims-driven companies increase close rates, settlement outcomes, and cash velocity by integrating
+          <b>lead intelligence</b>, <b>claims strategy</b>, <b>settlement workflows</b>, and <b>rejuvenation revenue</b> into one system.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn" href="#contact">Book a Strategy Call</a>
+          <a class="btn secondary" href="#pricing">See Pricing</a>
+          <a class="btn secondary" href="#cycle">See the Cycle Diagram</a>
+        </div>
+
+        <div class="kpis" aria-label="Immediate value bullets">
+          <div class="kpi">
+            <strong>Immediate Value</strong>
+            <span>Lead conversion + claim positioning + cash flow controls</span>
+          </div>
+          <div class="kpi">
+            <strong>Minimal Investment</strong>
+            <span>Start with advisory + one activation</span>
+          </div>
+          <div class="kpi">
+            <strong>Scalable Upside</strong>
+            <span>White-label rejuvenation + internal lead engine</span>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:14px">
+          Disclosure: We may receive compensation from platform enablement (referrals/revenue share) where permitted.
+          Alignment is disclosed upfront. No hidden incentives.
+        </p>
+      </div>
+
+      <div class="card heroRight">
+        <div class="panel" style="padding:16px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02)">
+          <div class="pillRow">
+            <span class="pill"><b>Lead Intelligence</b> → PayPixl</span>
+            <span class="pill"><b>Claims Strategy</b> → 5th Element</span>
+            <span class="pill"><b>Settlement Flow</b> → IINK</span>
+            <span class="pill"><b>Rejuvenation</b> → Peak 301 / Peak Pros</span>
+            <span class="pill"><b>Pricing</b> → TradeGauge.ai</span>
+            <span class="pill"><b>Legal Escalation</b> → WEK Law</span>
+          </div>
+
+          <div class="callout">
+            <b>Day-1 Bottom Line Move:</b>
+            Put your leads on a conversion rail (QR + “your roof” experience) <i>and</i> tighten claim/supplement positioning so cash comes in faster and cleaner.
+          </div>
+
+          <div class="logos" aria-label="Logo placeholders">
+            <!-- Replace src with your logo files (prefer SVG/PNG).
+                 Keep file names simple and host in same folder OR embed as base64 (see instructions below). -->
+            <div class="logoTile"><img id="logo-5th" alt="5th Element Adjusting logo" src="" onerror="this.replaceWith(logoFallback('5th Element Adjusting'))"></div>
+            <div class="logoTile"><img id="logo-gdrr" alt="Go Dawgs Roof Roof logo" src="" onerror="this.replaceWith(logoFallback('Go Dawgs! Roof Roof'))"></div>
+            <div class="logoTile"><img id="logo-peak301" alt="Peak 301 logo" src="" onerror="this.replaceWith(logoFallback('Peak 301'))"></div>
+            <div class="logoTile"><img id="logo-peakpros" alt="Peak Pros logo" src="" onerror="this.replaceWith(logoFallback('Peak Pros'))"></div>
+            <div class="logoTile"><img id="logo-paypixl" alt="PayPixl logo" src="" onerror="this.replaceWith(logoFallback('PayPixl'))"></div>
+            <div class="logoTile"><img id="logo-tradegauge" alt="TradeGauge.ai logo" src="" onerror="this.replaceWith(logoFallback('TradeGauge.ai'))"></div>
+            <div class="logoTile"><img id="logo-iink" alt="IINK Pay logo" src="" onerror="this.replaceWith(logoFallback('IINK Pay'))"></div>
+            <div class="logoTile"><img id="logo-wek" alt="WEK Law Group logo" src="" onerror="this.replaceWith(logoFallback('WEK Law Group'))"></div>
+          </div>
+
+          <p class="small" style="margin:12px 0 0">
+            Tip: drop your logos into the same folder and set the <code>src</code> values in one place (see JS config at bottom).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CYCLE -->
+    <div id="cycle" class="section">
+      <div class="card cycleCard">
+        <div class="cycleHeader">
+          <div>
+            <h2>The Revenue Cycle (Where We Increase Profit at Every Step)</h2>
+            <div class="small">
+              Click any node to see exactly how we create immediate value. The system cycles from
+              <b>claim origination → settlement → controlled disbursement → service expansion → internal lead engine</b>.
+            </div>
+          </div>
+
+          <div class="tabs" aria-label="Cycle controls">
+            <div class="tab active" data-mode="auto" onclick="setCycleMode('auto')">Auto-cycle</div>
+            <div class="tab" data-mode="manual" onclick="setCycleMode('manual')">Manual</div>
+            <div class="tab" onclick="jumpToImpact()">Day-1 Impact</div>
+          </div>
+        </div>
+
+        <div class="cycleLayout">
+          <div class="diagram" aria-label="Cycle diagram">
+            <svg viewBox="0 0 640 520" role="img" aria-label="Revenue cycle diagram">
+              <defs>
+                <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                  <path d="M0,0 L12,6 L0,12 Z" fill="rgba(255,255,255,.35)"></path>
+                </marker>
+              </defs>
+
+              <!-- Rings -->
+              <circle cx="320" cy="260" r="165" class="ring"></circle>
+              <circle cx="320" cy="260" r="165" class="ring2"></circle>
+
+              <!-- Arrows (approximate loop) -->
+              <path class="arrow" d="M320 95 C420 105 500 160 525 250"></path>
+              <path class="arrow" d="M525 250 C540 345 490 420 400 450"></path>
+              <path class="arrow" d="M400 450 C305 485 220 465 155 395"></path>
+              <path class="arrow" d="M155 395 C95 320 95 240 135 165"></path>
+              <path class="arrow" d="M135 165 C185 105 245 85 320 95"></path>
+
+              <!-- Center -->
+              <g>
+                <circle cx="320" cy="260" r="82" fill="rgba(200,16,46,.12)" stroke="rgba(200,16,46,.30)" stroke-width="1.5"></circle>
+                <text x="320" y="252" text-anchor="middle" class="nodeLabel" style="font-size:15px">Roofing Revenue</text>
+                <text x="320" y="272" text-anchor="middle" class="nodeSub">System Integration</text>
+                <text x="320" y="295" text-anchor="middle" class="nodeSub">Day-1 Profit Lift</text>
+              </g>
+
+              <!-- Nodes -->
+              <!-- 1: Claim Origination -->
+              <g class="node" onclick="selectNode(0)">
+                <circle id="n0" class="nodeCircle" cx="320" cy="95" r="46"></circle>
+                <text x="320" y="87" text-anchor="middle" class="nodeLabel">Claim</text>
+                <text x="320" y="104" text-anchor="middle" class="nodeSub">Origination</text>
+              </g>
+
+              <!-- 2: Settlement & Supplement Strategy -->
+              <g class="node" onclick="selectNode(1)">
+                <circle id="n1" class="nodeCircle" cx="525" cy="250" r="46"></circle>
+                <text x="525" y="242" text-anchor="middle" class="nodeLabel">Settlement</text>
+                <text x="525" y="259" text-anchor="middle" class="nodeSub">Strategy</text>
+              </g>
+
+              <!-- 3: Disbursement & Controls -->
+              <g class="node" onclick="selectNode(2)">
+                <circle id="n2" class="nodeCircle" cx="400" cy="450" r="46"></circle>
+                <text x="400" y="442" text-anchor="middle" class="nodeLabel">Funding</text>
+                <text x="400" y="459" text-anchor="middle" class="nodeSub">Control</text>
+              </g>
+
+              <!-- 4: Service Expansion (Rejuvenation) -->
+              <g class="node" onclick="selectNode(3)">
+                <circle id="n3" class="nodeCircle" cx="155" cy="395" r="46"></circle>
+                <text x="155" y="387" text-anchor="middle" class="nodeLabel">Peak 301</text>
+                <text x="155" y="404" text-anchor="middle" class="nodeSub">Rejuv.</text>
+              </g>
+
+              <!-- 5: Lead Engine (PayPixl + QR) -->
+              <g class="node" onclick="selectNode(4)">
+                <circle id="n4" class="nodeCircle" cx="135" cy="165" r="46"></circle>
+                <text x="135" y="157" text-anchor="middle" class="nodeLabel">Lead</text>
+                <text x="135" y="174" text-anchor="middle" class="nodeSub">Engine</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="details" aria-label="Node details">
+            <div class="detailTop">
+              <div class="detailLogo" id="detailLogo">
+                <span>Logo</span>
+              </div>
+              <div>
+                <h3 id="detailTitle">Claim Origination</h3>
+                <p id="detailSubtitle">How we position the claim from day one to reduce leakage and increase recoverable scope.</p>
+              </div>
+            </div>
+
+            <div class="detailBody">
+              <ul class="bul" id="detailBullets"></ul>
+            </div>
+
+            <div class="valueBox">
+              <strong id="detailValueTitle">Day-1 Bottom Line Impact</strong>
+              <span id="detailValueText">Tighten claim narrative + documentation workflow so the scope is cleaner, the carrier response is faster, and supplements are stronger.</span>
+            </div>
+
+            <div class="small">
+              Want this built inside your business? We offer subscription advisory + activation (a la carte) + optional performance upside.
+            </div>
+
+            <a class="btn" href="#contact">Book a Strategy Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFERINGS -->
+    <div id="offerings" class="section">
+      <div class="grid2">
+        <div class="card panel">
+          <h2>What We Install in Your Business</h2>
+          <p>We don’t “consult.” We install a revenue system with measurable impact.</p>
+
+          <ul class="list">
+            <li>
+              <div class="ico">1</div>
+              <div>
+                <b>Lead Intelligence + Conversion Rails</b>
+                <div class="muted">PayPixl leads + QR-coded direct mail, door hangers, and yard signs linking homeowners to a picture of their own roof.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">2</div>
+              <div>
+                <b>Claims Strategy + Scope Positioning</b>
+                <div class="muted">Documentation + estimating cadence + supplement posture to increase recoverable scope and reduce delays.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">3</div>
+              <div>
+                <b>Settlement Disbursement Controls</b>
+                <div class="muted">IINK Pay wallet/controls to pay subs, hold funds, and create cleaner collections & audit trails.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">4</div>
+              <div>
+                <b>Service Expansion (Peak 301)</b>
+                <div class="muted">Territory/drum access + Peak Pros white-label model for revenue share with roofing, gutters, and power washing partners.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">5</div>
+              <div>
+                <b>Pricing & Margin Intelligence</b>
+                <div class="muted">TradeGauge.ai access + workflows to stop underbidding and protect gross profit.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card panel">
+          <h2>Lead Gen Company Partnership (PayPixl Upgrade)</h2>
+          <p>We can partner with lead gen companies to make their leads more accurate, more valuable, and priced higher.</p>
+
+          <ul class="list">
+            <li>
+              <div class="ico">A</div>
+              <div>
+                <b>Drone → Asset → QR Lead</b>
+                <div class="muted">We take the roof capture (CAVE file / imagery package) and produce an interactive homeowner-facing lead asset.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">B</div>
+              <div>
+                <b>Direct Mail With “Your Roof” QR</b>
+                <div class="muted">Mailers sent to captured addresses with QR codes linking directly to the homeowner’s own roof image experience.</div>
+              </div>
+            </li>
+            <li>
+              <div class="ico">C</div>
+              <div>
+                <b>On-Street + Door Assets</b>
+                <div class="muted">Matching QR-coded door hangers, yard signs, and neighborhood saturation to lift close rates.</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="callout">
+            <b>Result:</b> Better lead quality + better homeowner engagement + higher conversion = leads can be priced higher with proof.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div id="pricing" class="section">
+      <div class="card panel">
+        <h2>Pricing</h2>
+        <p>Start small. Create immediate value. Scale after proof.</p>
+
+        <div class="pricing">
+          <div class="card priceCard">
+            <h3>Foundation</h3>
+            <p class="price">$750 <small>/ month</small></p>
+            <ul class="priceList">
+              <li><span class="check"></span><span>Revenue & lead audit</span></li>
+              <li><span class="check"></span><span>Market positioning & offers</span></li>
+              <li><span class="check"></span><span>Vendor stack map</span></li>
+              <li><span class="check"></span><span>Monthly strategy call</span></li>
+            </ul>
+          </div>
+
+          <div class="card priceCard" style="border-color:rgba(200,16,46,.35)">
+            <h3>Growth</h3>
+            <p class="price">$1,500 <small>/ month</small></p>
+            <ul class="priceList">
+              <li><span class="check"></span><span>Everything in Foundation</span></li>
+              <li><span class="check"></span><span>PayPixl deployment strategy</span></li>
+              <li><span class="check"></span><span>Drone → QR → mail workflow</span></li>
+              <li><span class="check"></span><span>Peak 301 feasibility + access path</span></li>
+              <li><span class="check"></span><span>TradeGauge.ai margin workflow</span></li>
+            </ul>
+          </div>
+
+          <div class="card priceCard">
+            <h3>Scale / Claims-Driven</h3>
+            <p class="price">$3,000 <small>/ month</small></p>
+            <ul class="priceList">
+              <li><span class="check"></span><span>Everything in Growth</span></li>
+              <li><span class="check"></span><span>Settlement controls (IINK)</span></li>
+              <li><span class="check"></span><span>PA integration strategy</span></li>
+              <li><span class="check"></span><span>Legal escalation pathway</span></li>
+              <li><span class="check"></span><span>Revenue share structuring</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Minimal Investment, Immediate Value:</b> Start at Foundation + one activation (PayPixl conversion rail OR Peak 301 revenue program).
+          Prove impact fast, then scale.
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+      <div class="card panel">
+        <h2>Book a Strategy Call</h2>
+        <p>
+          Replace this section with your Calendly embed or a Netlify form.
+          If you want it to match your existing Netlify single-file workflow, keep this HTML as <b>index.html</b> and deploy.
+        </p>
+
+        <!-- OPTION A: Calendly Link -->
+        <div class="heroActions">
+          <a class="btn" href="https://calendly.com/YOUR-LINK-HERE" target="_blank" rel="noreferrer">Open Calendly</a>
+          <a class="btn secondary" href="mailto:YOUR@EMAIL.COM?subject=Strategy%20Call%20Request&body=Name%3A%0ACompany%3A%0APhone%3A%0AWhat%20are%20you%20trying%20to%20fix%3F%0A">Email Us</a>
+        </div>
+
+        <!-- OPTION B: Netlify Form (uncomment to use)
+        <form name="strategy-call" method="POST" data-netlify="true" class="card" style="margin-top:14px; padding:14px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02)">
+          <input type="hidden" name="form-name" value="strategy-call" />
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
+            <div>
+              <label class="small">Name</label>
+              <input name="name" required style="width:100%; padding:10px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25); color:var(--text)" />
+            </div>
+            <div>
+              <label class="small">Company</label>
+              <input name="company" required style="width:100%; padding:10px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25); color:var(--text)" />
+            </div>
+            <div>
+              <label class="small">Email</label>
+              <input name="email" type="email" required style="width:100%; padding:10px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25); color:var(--text)" />
+            </div>
+            <div>
+              <label class="small">Phone</label>
+              <input name="phone" style="width:100%; padding:10px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25); color:var(--text)" />
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <label class="small">What are you trying to fix?</label>
+            <textarea name="message" rows="5" style="width:100%; padding:10px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,.25); color:var(--text)"></textarea>
+          </div>
+          <button class="btn" style="margin-top:10px; border:none" type="submit">Request Call</button>
+        </form>
+        -->
+
+        <div class="footer">
+          <div class="legal">
+            <b>Disclosure & Compliance:</b> We are not a law firm. We do not provide legal advice.
+            Public adjusting services (if any) are offered only where properly licensed and permitted.
+            Some enablement partnerships may include referral fees or revenue share; these relationships are disclosed.
+            Use of third-party logos is subject to trademark/usage rights. Obtain permission where required.
+          </div>
+          <div>© <span id="yr"></span> Roofing Revenue Systems™</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ========= LOGO CONFIG =========
+    // Drop your logo files in the same folder and set these paths.
+    // Example: "assets/paypixl.svg" or "logos/paypixl.png"
+    // You can also use data URIs (base64) if you want a single-file deploy.
+    const LOGOS = {
+      fifth: "",        // e.g. "assets/5th-element.svg"
+      gdrr: "",         // e.g. "assets/gdrr.svg"
+      peak301: "",      // e.g. "assets/peak301.svg"
+      peakpros: "",     // e.g. "assets/peakpros.svg"
+      paypixl: "",      // e.g. "assets/paypixl.svg"
+      tradegauge: "",   // e.g. "assets/tradegauge.svg"
+      iink: "",         // e.g. "assets/iinkpay.svg"
+      wek: ""           // e.g. "assets/wek-law.svg"
+    };
+
+    function applyLogos(){
+      const map = [
+        ["logo-5th","fifth"],["logo-gdrr","gdrr"],["logo-peak301","peak301"],["logo-peakpros","peakpros"],
+        ["logo-paypixl","paypixl"],["logo-tradegauge","tradegauge"],["logo-iink","iink"],["logo-wek","wek"]
+      ];
+      map.forEach(([id,key])=>{
+        const el = document.getElementById(id);
+        if(!el) return;
+        if(LOGOS[key] && LOGOS[key].trim().length){
+          el.src = LOGOS[key];
+        }
+      });
+    }
+    function logoFallback(name){
+      const div = document.createElement("div");
+      div.style.color = "rgba(185,189,201,.9)";
+      div.style.fontSize = "12px";
+      div.style.textAlign = "center";
+      div.textContent = name;
+      return div;
+    }
+
+    // ========= CYCLE NODES DATA =========
+    const NODES = [
+      {
+        title: "Claim Origination",
+        subtitle: "Position the claim from Day 1 so scope is cleaner, recoverable, and faster.",
+        logoKey: "fifth",
+        logoName: "5th Element Adjusting",
+        bullets: [
+          "<b>Document strategy:</b> photos, causation narrative, and scope logic that carriers respond to.",
+          "<b>Estimating posture:</b> reduce missed line items and prevent underpayment.",
+          "<b>Process control:</b> timelines, touchpoints, and decision-tree to avoid delays."
+        ],
+        valueTitle: "Day-1 Bottom Line Impact",
+        valueText: "Reduce leakage and speed carrier momentum by installing a repeatable claim positioning workflow."
+      },
+      {
+        title: "Settlement Strategy",
+        subtitle: "Increase recoverable scope with stronger supplements and claim communication rails.",
+        logoKey: "fifth",
+        logoName: "5th Element Adjusting",
+        bullets: [
+          "<b>Supplement playbook:</b> what to submit, when, and how to win the line items.",
+          "<b>Carrier friction reduction:</b> cleaner evidence packages = fewer re-inspections.",
+          "<b>Escalation path:</b> when to move from negotiation → counsel (where permitted)."
+        ],
+        valueTitle: "Immediate Value",
+        valueText: "Improve settlement outcomes by tightening scope logic and supplement cadence."
+      },
+      {
+        title: "Funding Control & Disbursement",
+        subtitle: "Turn settlement money into controlled production cash flow.",
+        logoKey: "iink",
+        logoName: "IINK Pay",
+        bullets: [
+          "<b>Wallet workflow:</b> hold funds, release by milestone, reduce disputes.",
+          "<b>Pay subs cleanly:</b> improve production velocity and vendor trust.",
+          "<b>Audit trail:</b> cleaner documentation protects contractor + homeowner."
+        ],
+        valueTitle: "Cash Velocity",
+        valueText: "Improve collections and reduce cash chaos with a controlled disbursement system."
+      },
+      {
+        title: "Peak 301 Rejuvenation + White-Label Revenue",
+        subtitle: "Add high-margin service revenue with territory leverage and partner revenue share.",
+        logoKey: "peak301",
+        logoName: "Peak 301 / Peak Pros",
+        bullets: [
+          "<b>Procurement path:</b> access to drums/territories and deployment planning.",
+          "<b>White-label model:</b> share revenue with roofers, gutter, and power-wash partners.",
+          "<b>Territory leverage:</b> turn exclusivity into predictable recurring revenue."
+        ],
+        valueTitle: "New Revenue Stream",
+        valueText: "Create immediate service expansion revenue without building a new roofing division."
+      },
+      {
+        title: "Internal Lead Engine (7× ROI Rail)",
+        subtitle: "Control lead cost, raise conversion, and build repeatable neighborhood saturation.",
+        logoKey: "paypixl",
+        logoName: "PayPixl",
+        bullets: [
+          "<b>Drone → interactive lead:</b> homeowner sees <i>their roof</i> (high intent).",
+          "<b>QR asset kit:</b> mailers + door hangers + yard signs matched to addresses.",
+          "<b>In-house control:</b> reduce reliance on overpriced third-party leads."
+        ],
+        valueTitle: "Day-1 Profit Lift",
+        valueText: "Higher close rate + lower lead cost = immediate bottom-line improvement with minimal spend."
+      }
+    ];
+
+    // ========= CYCLE UI =========
+    let activeIndex = 0;
+    let mode = "auto";
+    let timer = null;
+
+    function setCycleMode(next){
+      mode = next;
+      document.querySelectorAll(".tab[data-mode]").forEach(t=>{
+        t.classList.toggle("active", t.dataset.mode === next);
+      });
+      if(mode === "auto"){
+        startAuto();
+      } else {
+        stopAuto();
+      }
+    }
+
+    function startAuto(){
+      stopAuto();
+      timer = setInterval(()=> {
+        selectNode((activeIndex + 1) % NODES.length, true);
+      }, 4200);
+    }
+    function stopAuto(){
+      if(timer){ clearInterval(timer); timer = null; }
+    }
+
+    function selectNode(idx, fromAuto=false){
+      activeIndex = idx;
+
+      // highlight circles
+      for(let i=0;i<5;i++){
+        const c = document.getElementById("n"+i);
+        if(c) c.classList.toggle("active", i===idx);
+      }
+
+      // update detail panel
+      const d = NODES[idx];
+      document.getElementById("detailTitle").textContent = d.title;
+      document.getElementById("detailSubtitle").textContent = d.subtitle;
+
+      const ul = document.getElementById("detailBullets");
+      ul.innerHTML = "";
+      d.bullets.forEach(b=>{
+        const li = document.createElement("li");
+        li.innerHTML = b;
+        ul.appendChild(li);
+      });
+
+      document.getElementById("detailValueTitle").textContent = d.valueTitle;
+      document.getElementById("detailValueText").textContent = d.valueText;
+
+      // logo
+      const box = document.getElementById("detailLogo");
+      box.innerHTML = "";
+      const src = LOGOS[d.logoKey];
+      if(src && src.trim().length){
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = d.logoName + " logo";
+        box.appendChild(img);
+      } else {
+        const s = document.createElement("span");
+        s.textContent = d.logoName;
+        box.appendChild(s);
+      }
+
+      // if user clicked in manual mode, don't restart auto
+      if(mode === "auto" && !fromAuto){
+        startAuto();
+      }
+    }
+
+    function jumpToImpact(){
+      // "Day-1 Impact" = Lead Engine node
+      selectNode(4);
+      document.getElementById("cycle").scrollIntoView({behavior:"smooth", block:"start"});
+    }
+
+    // ========= INIT =========
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    applyLogos();
+    selectNode(0, true);
+    startAuto();
+  </script>
+
+  <!--
+    ===========================
+    HOW TO ADD LOGOS (FAST)
+    ===========================
+
+    Option 1 (recommended): put logo files in a folder named /assets and set LOGOS paths in the script:
+      fifth: "assets/5th-element.svg"
+      paypixl: "assets/paypixl.svg"
+      ...
+
+    Option 2 (single-file): convert each logo to base64 data URI and paste into LOGOS:
+      fifth: "data:image/svg+xml;base64,PHN2Zy4uLg=="
+
+    IMPORTANT:
+    Make sure you have permission to use each logo on your site. Many brands allow it with correct usage.
+
+    If you want me to deliver a fully branded version:
+    - Upload the logo files (SVG/PNG) for each company (or tell me where they live).
+    - Tell me your preferred domain + Calendly link + email.
+    - I’ll return a final index.html with all logos embedded (single file).
+  -->
+</body>
+</html>
