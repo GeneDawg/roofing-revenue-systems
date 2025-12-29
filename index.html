@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Peak Pros Platform™ | PayPixl → City Publications → Repair/Rejuvenate/Replace → Claims → Disbursement</title>
-  <meta name="description" content="The Peak Pros Platform™ is a plug-and-play growth + claims + finance flywheel for Peak 301 contractors: PayPixl lead origination, City Publications QR mailers, multi-channel outreach, triage (repair/rejuvenate/replace), claims strategy, settlement/disbursement, legal escalation, and recurring white-label rejuvenation revenue." />
+  <title>The Peak Pros Platform™ | Peak 301 Contractor Growth Flywheel</title>
+  <meta name="description" content="The one-stop plug-and-play platform for Peak 301 contractors: RPM territories + PayPixl origination + City Publications QR mailers + triage + rejuvenation + claims + settlement + legal + profitability + PE readiness." />
 
   <style>
     :root{
@@ -17,26 +17,24 @@
       --line:#242633;
       --accent:#C8102E;
       --ok:#19c37d;
-      --warn:#f2b84b;
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius:18px;
       --radius2:14px;
-      --max:1180px;
+      --max:1200px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background:
-        radial-gradient(900px 500px at 20% -10%, rgba(200,16,46,.25), transparent 60%),
-        radial-gradient(700px 500px at 95% 10%, rgba(255,255,255,.10), transparent 55%),
+        radial-gradient(900px 500px at 20% -10%, rgba(200,16,46,.22), transparent 60%),
+        radial-gradient(700px 500px at 95% 10%, rgba(255,255,255,.08), transparent 55%),
         var(--bg);
       color:var(--text);
       line-height:1.35;
     }
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 78px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 72px}
 
     .topbar{
       display:flex; align-items:center; justify-content:space-between;
@@ -44,17 +42,8 @@
       background:rgba(16,17,20,.65); backdrop-filter: blur(10px);
       position:sticky; top:12px; z-index:20;
     }
-    .brand{display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.2px}
-    .brandLogo{
-      width:34px;height:34px;border-radius:10px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-    }
-    .brandLogo img{width:100%;height:100%;object-fit:contain}
-    .badge{
-      display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px}
+    .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
       border:1px solid var(--line); background:rgba(21,22,28,.8); font-size:12px; color:var(--muted)
     }
     .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
@@ -85,18 +74,16 @@
 
     .hero{
       margin-top:20px;
-      display:grid; grid-template-columns: 1.12fr .88fr; gap:18px;
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
       align-items:stretch;
     }
     @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr; }
       .topbar{position:relative; top:auto}
     }
     .heroLeft{padding:26px 22px}
     h1{margin:0 0 10px; font-size:44px; line-height:1.02; letter-spacing:-.6px;}
     .sub{color:var(--muted); font-size:16px; margin:0 0 16px; max-width:70ch;}
-    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-
     .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px}
     @media (max-width: 640px){ .kpis{grid-template-columns:1fr} }
     .kpi{
@@ -106,9 +93,16 @@
     }
     .kpi strong{display:block; font-size:14px}
     .kpi span{display:block; font-size:12px; color:var(--muted)}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .small{font-size:12px; color:var(--muted2)}
 
     .heroRight{padding:18px 18px 14px; display:flex; flex-direction:column; gap:12px}
+    .panel{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02)
+    }
     .pillRow{display:flex; flex-wrap:wrap; gap:8px}
     .pill{
       padding:8px 10px; border-radius:999px; border:1px solid var(--line);
@@ -142,40 +136,106 @@
 
     .section{margin-top:22px}
     .section h2{margin:0 0 10px; font-size:22px}
-    .panel{padding:18px}
-    .panel p{margin:0 0 10px; color:var(--muted)}
+    .section p{margin:0 0 10px; color:var(--muted)}
 
-    /* Flywheel layout */
-    .flywheelCard{padding:18px}
-    .flywheelHeader{
+    /* FLYWHEEL */
+    .flyCard{padding:18px}
+    .flyHeader{
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
       margin-bottom:10px;
     }
-    .flywheelHeader .small{max-width:90ch}
-    .flywheelLayout{display:grid; grid-template-columns: 1.05fr .95fr; gap:14px; align-items:stretch;}
-    @media (max-width: 980px){ .flywheelLayout{grid-template-columns:1fr} }
+    .flyLayout{display:grid; grid-template-columns: 1.05fr .95fr; gap:14px; align-items:stretch;}
+    @media (max-width: 980px){ .flyLayout{grid-template-columns:1fr} }
 
-    .diagram{
+    .wheel{
       border:1px solid var(--line);
       border-radius:var(--radius);
       background:rgba(255,255,255,.02);
-      padding:14px;
-      min-height:460px;
-      display:flex; align-items:center; justify-content:center;
       position:relative;
+      min-height:520px;
       overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+    }
+    .wheelInner{
+      position:relative;
+      width:min(520px, 100%);
+      aspect-ratio: 1 / 1;
+    }
+    .ring{
+      position:absolute; inset:10%;
+      border-radius:999px;
+      border:18px solid rgba(255,255,255,.08);
+    }
+    .ringDash{
+      position:absolute; inset:10%;
+      border-radius:999px;
+      border:4px dashed rgba(200,16,46,.28);
+      animation: spin 16s linear infinite;
+      opacity:.9;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .wheelCenter{
+      position:absolute; inset:33%;
+      border-radius:999px;
+      background: rgba(200,16,46,.12);
+      border:1px solid rgba(200,16,46,.30);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:12px;
+    }
+    .wheelCenter b{display:block; font-size:15px; letter-spacing:.2px}
+    .wheelCenter span{display:block; font-size:12px; color:rgba(185,189,201,.95); margin-top:6px}
+
+    .node{
+      position:absolute;
+      width:110px;
+      height:110px;
+      border-radius:999px;
+      background: rgba(16,17,20,.92);
+      border:1.25px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      cursor:pointer;
+      user-select:none;
+      padding:10px;
+    }
+    .node img{max-width:60px; max-height:34px; object-fit:contain}
+    .node .lbl{
+      font-size:11.5px;
+      font-weight:900;
+      text-align:center;
+      line-height:1.05;
+    }
+    .node .subLbl{
+      font-size:10px;
+      color:rgba(185,189,201,.95);
+      font-weight:700;
+      text-align:center;
+      margin-top:-4px;
+    }
+    .node.active{
+      border:2px solid rgba(200,16,46,.95);
     }
 
-    svg{max-width:100%; height:auto}
-    .ring{fill:none; stroke: rgba(255,255,255,.10); stroke-width: 18;}
-    .ring2{fill:none; stroke: rgba(200,16,46,.20); stroke-width: 4; stroke-dasharray: 6 10; animation: dash 10s linear infinite; opacity:.85;}
-    @keyframes dash{to { stroke-dashoffset: -220; }}
-    .arrow{stroke: rgba(255,255,255,.22); stroke-width: 2; marker-end:url(#arrowHead); opacity:.85;}
-    .nodeHit{cursor:pointer}
-    .nodeCircle{fill: rgba(16,17,20,.92); stroke: rgba(255,255,255,.18); stroke-width: 1.25;}
-    .nodeCircle.active{stroke: rgba(200,16,46,.95); stroke-width: 2.2;}
-    .nodeLabel{fill: var(--text); font-size: 11.5px; font-weight: 900;}
-    .nodeSub{fill: rgba(185,189,201,.95); font-size: 10px; font-weight: 700;}
+    /* node placement (8 nodes) */
+    .n0{top:2%; left:50%; transform:translate(-50%,0)}     /* RPM */
+    .n1{top:16%; left:82%; transform:translate(-50%,0)}    /* Peak 301 */
+    .n2{top:50%; left:92%; transform:translate(-50%,-50%)} /* PayPixl */
+    .n3{top:84%; left:82%; transform:translate(-50%,-100%)}/* CityPub */
+    .n4{top:98%; left:50%; transform:translate(-50%,-100%)}/* Triage */
+    .n5{top:84%; left:18%; transform:translate(-50%,-100%)}/* White Label */
+    .n6{top:50%; left:8%; transform:translate(-50%,-50%)}  /* Claims / iink */
+    .n7{top:16%; left:18%; transform:translate(-50%,0)}    /* TradeGauge / Exit */
 
     .details{
       border:1px solid var(--line);
@@ -192,7 +252,7 @@
       padding:12px;
     }
     .detailLogo{
-      width:88px; height:58px;
+      width:92px; height:56px;
       border-radius:12px;
       border:1px dashed rgba(255,255,255,.18);
       display:flex; align-items:center; justify-content:center;
@@ -203,36 +263,14 @@
     .detailLogo img{max-width:100%; max-height:100%; object-fit:contain}
     .detailTop h3{margin:0; font-size:16px}
     .detailTop p{margin:2px 0 0; color:var(--muted); font-size:13px}
-    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:6px}
-    .tag{
-      font-size:11px; font-weight:900;
-      padding:6px 9px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--muted);
-    }
-    .tag.ok{border-color:rgba(25,195,125,.35); background:rgba(25,195,125,.08); color:rgba(246,247,251,.92)}
-    .tag.warn{border-color:rgba(242,184,75,.35); background:rgba(242,184,75,.08); color:rgba(246,247,251,.92)}
-    .tag.acc{border-color:rgba(200,16,46,.35); background:rgba(200,16,46,.10); color:rgba(246,247,251,.92)}
-
     .detailBody{
       border:1px solid var(--line);
       border-radius:14px;
       background:rgba(255,255,255,.03);
       padding:12px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
     }
-    .detailBullets{
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:12px;
-    }
-    .detailBullets ul{margin:0; padding-left:18px; color:var(--muted); font-size:13px}
-    .detailBullets li{margin:8px 0}
+    .detailBody .bul{margin:0; padding-left:18px; color:var(--muted); font-size:13px}
+    .detailBody .bul li{margin:8px 0}
     .valueBox{
       border:1px solid rgba(25,195,125,.35);
       background: rgba(25,195,125,.08);
@@ -240,88 +278,39 @@
       padding:12px;
     }
     .valueBox strong{display:block}
-    .valueBox span{display:block; color:rgba(246,247,251,.85); font-size:13px; margin-top:4px}
+    .valueBox span{display:block; color:rgba(246,247,251,.86); font-size:13px; margin-top:4px}
 
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap}
-    .miniBtn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px;
-      border-radius:999px;
+    .tabs{display:flex; gap:8px; flex-wrap:wrap}
+    .tab{
       border:1px solid var(--line);
       background:rgba(255,255,255,.03);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:900;
-      font-size:12px;
-    }
-    .miniBtn:hover{background:rgba(255,255,255,.05)}
-
-    /* Workflow list */
-    .workflowGrid{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap:14px;
-    }
-    @media (max-width: 980px){ .workflowGrid{grid-template-columns:1fr} }
-    .steps{
-      border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02);
-      padding:14px;
-    }
-    .step{
-      border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.03);
-      padding:12px; margin-bottom:10px;
-      display:flex; gap:12px; align-items:flex-start;
-    }
-    .step:last-child{margin-bottom:0}
-    .stepIcon{
-      width:56px;height:40px;border-radius:12px;
-      border:1px dashed rgba(255,255,255,.18);
-      background:rgba(0,0,0,.20);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .stepIcon img{max-width:100%; max-height:100%; object-fit:contain}
-    .step h4{margin:0 0 5px; font-size:14px}
-    .step p{margin:0; color:var(--muted); font-size:13px; line-height:1.45}
-
-    /* Revenue charts */
-    .charts{
-      border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02);
-      padding:14px;
-    }
-    .chartCard{
-      border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.03);
-      padding:12px; margin-bottom:10px;
-    }
-    .chartCard:last-child{margin-bottom:0}
-    .chartTitle{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
-    .chartTitle b{font-size:13px}
-    .chartTitle span{font-size:12px; color:var(--muted)}
-    .barWrap{
-      margin-top:10px;
-      height:12px;
+      color:var(--muted);
+      padding:9px 10px;
       border-radius:999px;
-      background:rgba(255,255,255,.06);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
+      font-size:12px;
+      cursor:pointer;
+      user-select:none;
+      font-weight:800;
     }
-    .bar{height:100%; width:0%;}
-    .bar.base{background:rgba(185,189,201,.55)}
-    .bar.good{background:rgba(25,195,125,.70)}
-    .bar.great{background:rgba(200,16,46,.70)}
-    .numbers{
-      margin-top:10px;
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:10px;
+    .tab.active{
+      background: rgba(200,16,46,.15);
+      border-color: rgba(200,16,46,.35);
+      color: var(--text);
     }
-    .numBox{
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.18);
-      border-radius:12px;
-      padding:10px;
-    }
-    .numBox strong{display:block; font-size:12px}
-    .numBox span{display:block; margin-top:4px; color:rgba(246,247,251,.88); font-size:13px; font-weight:900}
 
+    /* WORKFLOW */
+    .flowGrid{
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:14px; margin-top:12px;
+    }
+    @media (max-width: 980px){ .flowGrid{grid-template-columns:1fr} }
+    .flowCard{padding:16px}
+    .flowCard h3{margin:0 0 8px; font-size:16px}
+    .flowCard p{margin:0; color:var(--muted); font-size:13px}
+    .flowCard ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
+    .flowCard li{margin:8px 0}
+
+    /* FOOTER */
     .footer{
       margin-top:24px;
       border-top:1px solid var(--line);
@@ -330,7 +319,7 @@
       font-size:12px;
       display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;
     }
-    .legal{max-width:92ch}
+    .legal{max-width:95ch}
   </style>
 </head>
 
@@ -339,80 +328,79 @@
 
     <div class="topbar">
       <div class="brand">
-        <div class="brandLogo" title="Peak Pros">
-          <img src="assets/peak-pros.jpg" alt="Peak Pros" onerror="this.style.display='none';">
-        </div>
+        <span class="dot" aria-hidden="true"></span>
         <span>The Peak Pros Platform<span style="opacity:.65">™</span></span>
-        <span class="badge"><span class="dot" style="width:6px;height:6px;background:var(--ok)"></span>Plug-and-play growth + claims + finance for Peak 301 contractors</span>
+        <span class="badge"><span class="dot" style="width:6px;height:6px;background:var(--ok)"></span>Built for Peak 301 contractors</span>
       </div>
 
       <div class="nav">
         <a href="#flywheel">Flywheel</a>
         <a href="#workflow">Workflow</a>
-        <a href="#revenue">Revenue</a>
-        <a href="#contact" class="btn">Book a 15-min Strategy Call</a>
+        <a href="#contact">Book Call</a>
+        <a class="btn" href="#contact">Get a 15-min Strategy Call</a>
       </div>
     </div>
 
     <!-- HERO -->
     <div class="hero">
       <div class="card heroLeft">
-        <h1>One platform. Every Peak 301 contractor becomes stronger.</h1>
+        <h1>Turn Peak 301 territories into a growth engine.</h1>
         <p class="sub">
-          The Peak Pros Platform™ is a <b>complete flywheel</b> that starts with PayPixl lead origination and ends with
-          higher close rates, faster cash, cleaner claim outcomes, and recurring white-label rejuvenation revenue.
-          This is built to compete immediately with any rejuvenation competitor by making contractors
-          <b>more measurable, more scalable, and more valuable</b>.
+          The Peak Pros Platform installs a contractor-ready flywheel: <b>RPM territories + training</b> → <b>PayPixl lead origination</b> →
+          <b>City Publications QR mailers</b> → <b>Repair / Rejuvenate / Replace triage</b> → <b>claims + settlement support</b> →
+          <b>profitability + PE readiness</b>.
         </p>
 
         <div class="heroActions">
-          <a class="btn" href="#flywheel">See the Flywheel</a>
-          <a class="btn secondary" href="#workflow">See the Workflow</a>
-          <a class="btn secondary" href="#revenue">Revenue Scenarios</a>
+          <a class="btn" href="#contact">Book a Strategy Call</a>
+          <a class="btn secondary" href="#flywheel">Open Flywheel</a>
+          <a class="btn secondary" href="#workflow">See Workflow</a>
         </div>
 
         <div class="kpis">
-          <div class="kpi"><strong>Minimal Investment</strong><span>Start with PayPixl → City Publications → Follow-up engine (fastest ROI)</span></div>
-          <div class="kpi"><strong>3-Way Triage</strong><span>Repair • Rejuvenate (Peak 301) • Replace (claim or retail)</span></div>
-          <div class="kpi"><strong>Enterprise Add-Ons</strong><span>Disbursement + legal escalation + back office + call center + cold email</span></div>
+          <div class="kpi"><strong>Minimal Investment</strong><span>Start with one activation: PayPixl + CityPub mail + follow-up rail</span></div>
+          <div class="kpi"><strong>3 Revenue Lanes</strong><span>Repair • Rejuvenate (Peak 301) • Replace (retail/insurance)</span></div>
+          <div class="kpi"><strong>Defensible Moat</strong><span>Data → proof → underwriting support → scalable systems</span></div>
         </div>
 
         <p class="small" style="margin-top:14px">
-          Compliance note: This platform is workflow + enablement. Claims escalation, public adjusting, legal services, and financial disbursement are performed by the appropriate licensed/authorized entities where required.
+          Disclosure & Compliance: We are not a law firm and do not provide legal advice. Services provided only where properly licensed/permitted.
+          Some partner enablement may include referral/revenue share where allowed and disclosed.
         </p>
       </div>
 
       <div class="card heroRight">
-        <div style="padding:16px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.02)">
+        <div class="panel">
           <div class="pillRow">
-            <span class="pill"><b>Origination</b> → PayPixl</span>
-            <span class="pill"><b>Direct Mail</b> → City Publications</span>
-            <span class="pill"><b>Triage</b> → Repair/Rejuv/Replace</span>
-            <span class="pill"><b>Claims</b> → 5th Element</span>
-            <span class="pill"><b>Disbursement</b> → IINK</span>
-            <span class="pill"><b>Legal</b> → WEK</span>
-            <span class="pill"><b>Health</b> → TradeGauge.ai</span>
+            <span class="pill"><b>RPM</b> → Territories + Training</span>
+            <span class="pill"><b>PayPixl</b> → AI Proof + Lead Sheet</span>
+            <span class="pill"><b>City Publications</b> → QR Mail</span>
+            <span class="pill"><b>Peak 301</b> → Rejuvenation</span>
+            <span class="pill"><b>5th Element</b> → Claims Support</span>
+            <span class="pill"><b>iink</b> → Settlement Disbursement</span>
+            <span class="pill"><b>WEK</b> → Legal Escalation</span>
+            <span class="pill"><b>TradeGauge.ai</b> → Profit + Exit</span>
           </div>
 
           <div class="callout">
-            <b>Fastest Day-1 Move:</b>
-            PayPixl capture → City Publications QR mailers → multi-channel follow-up.
-            This builds trust, creates urgency, and puts homeowners into your quote workflow with proof.
+            <b>Day-1 move:</b> Turn on PayPixl origination + City Publications QR mailers.
+            Every roof becomes a decision: <b>Repair</b>, <b>Rejuvenate</b>, or <b>Replace</b>.
           </div>
 
           <div class="logos">
-            <div class="logoTile"><img alt="PayPixl" src="assets/paypixl.jpg"></div>
-            <div class="logoTile"><img alt="City Publications" src="assets/CityPub-logo.jpg"></div>
-            <div class="logoTile"><img alt="Peak Pros" src="assets/peak-pros.jpg"></div>
-            <div class="logoTile"><img alt="Peak 301" src="assets/peak301.jpg"></div>
-            <div class="logoTile"><img alt="5th Element" src="assets/5th-element.jpeg"></div>
-            <div class="logoTile"><img alt="IINK" src="assets/iink.JPEG"></div>
-            <div class="logoTile"><img alt="WEK" src="assets/wek.jpg"></div>
-            <div class="logoTile"><img alt="TradeGauge" src="assets/tradegauge.jpg"></div>
+            <div class="logoTile"><img alt="RPM" data-srcset="assets/rpm.jpg|assets/rpm.png|assets/RPM Roof Solutions 1.jpg|assets/RPM%20Roof%20Solutions%201.jpg"></div>
+            <div class="logoTile"><img alt="PayPixl" data-srcset="assets/paypixl.jpg|assets/paypixl.jpeg|assets/paypixl.png"></div>
+            <div class="logoTile"><img alt="City Publications" data-srcset="assets/CityPub-logo.jpg|assets/citypublications.jpg|assets/citypublications.jpeg|assets/citypublications.png"></div>
+            <div class="logoTile"><img alt="Peak 301" data-srcset="assets/peak301.jpg|assets/peak301.jpeg|assets/peak301.png"></div>
+
+            <div class="logoTile"><img alt="5th Element" data-srcset="assets/5th-element.jpeg|assets/5th-element.jpg|assets/5th-element.png"></div>
+            <div class="logoTile"><img alt="iink" data-srcset="assets/iink.JPEG|assets/iink.jpeg|assets/iink.jpg|assets/iink.png"></div>
+            <div class="logoTile"><img alt="WEK" data-srcset="assets/wek.jpg|assets/wek.jpeg|assets/wek.png"></div>
+            <div class="logoTile"><img alt="TradeGauge" data-srcset="assets/tradegauge.jpg|assets/tradegauge.jpeg|assets/tradegauge.png"></div>
           </div>
 
           <p class="small" style="margin:12px 0 0">
-            White-label rejuvenation is a built-in offshoot: it activates when the roof is a fit for Peak 301.
+            This is the contractor operating system: territory + lead proof + mail + outreach + triage + claims + settlement + margin + exit.
           </p>
         </div>
       </div>
@@ -420,122 +408,102 @@
 
     <!-- FLYWHEEL -->
     <div id="flywheel" class="section">
-      <div class="card flywheelCard">
-        <div class="flywheelHeader">
+      <div class="card flyCard">
+        <div class="flyHeader">
           <div>
-            <h2>The Peak Pros Flywheel</h2>
-            <div class="small">
-              Click a node. This is the full, workable order: <b>PayPixl</b> origination → <b>City Publications</b> QR mail → outreach engine →
-              <b>Repair / Rejuvenate / Replace</b> triage → claims escalation (when needed) → <b>IINK</b> disbursement → <b>WEK</b> legal escalation (when needed) →
-              operational health and valuation lift via <b>TradeGauge.ai</b> → back into neighborhood saturation.
-            </div>
+            <h2>The Peak 301 Contractor Flywheel</h2>
+            <div class="small">Click a node. RPM is the backbone (territory + training + procurement). PayPixl + CityPub drive origination. Triage routes every lead to revenue.</div>
           </div>
-          <div class="heroActions">
-            <a class="btn secondary" href="#workflow">View Workflow</a>
-            <a class="btn" href="#contact">Book a Call</a>
+          <div class="tabs">
+            <div class="tab active" data-mode="auto" onclick="setWheelMode('auto')">Auto-cycle</div>
+            <div class="tab" data-mode="manual" onclick="setWheelMode('manual')">Manual</div>
           </div>
         </div>
 
-        <div class="flywheelLayout">
-          <div class="diagram">
-            <svg viewBox="0 0 720 560" role="img" aria-label="Peak Pros platform flywheel diagram">
-              <defs>
-                <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-                  <path d="M0,0 L12,6 L0,12 Z" fill="rgba(255,255,255,.32)"></path>
-                </marker>
-              </defs>
+        <div class="flyLayout">
+          <div class="wheel">
+            <div class="wheelInner">
+              <div class="ring"></div>
+              <div class="ringDash"></div>
 
-              <circle cx="360" cy="280" r="185" class="ring"></circle>
-              <circle cx="360" cy="280" r="185" class="ring2"></circle>
+              <div class="wheelCenter">
+                <div>
+                  <b>The Peak Pros Platform™</b>
+                  <span>Territory → Origination → Mail → Triage → Claims/Settlement → Profit/Exit</span>
+                </div>
+              </div>
 
-              <!-- arrows (clockwise) -->
-              <path class="arrow" d="M360 95 C470 105 560 175 595 270"></path>
-              <path class="arrow" d="M595 270 C620 385 560 480 450 510"></path>
-              <path class="arrow" d="M450 510 C330 545 230 520 170 435"></path>
-              <path class="arrow" d="M170 435 C115 350 120 245 170 170"></path>
-              <path class="arrow" d="M170 170 C230 105 285 90 360 95"></path>
+              <!-- NODES (clockwise) -->
+              <div class="node n0" data-key="rpm" onclick="selectNode('rpm')">
+                <img alt="RPM" data-srcset="assets/rpm.jpg|assets/rpm.png|assets/RPM Roof Solutions 1.jpg|assets/RPM%20Roof%20Solutions%201.jpg">
+                <div class="lbl">RPM</div>
+                <div class="subLbl">Territory + Training</div>
+              </div>
 
-              <!-- center -->
-              <g>
-                <circle cx="360" cy="280" r="90" fill="rgba(200,16,46,.12)" stroke="rgba(200,16,46,.30)" stroke-width="1.5"></circle>
-                <text x="360" y="270" text-anchor="middle" class="nodeLabel" style="font-size:16px">The Peak Pros</text>
-                <text x="360" y="292" text-anchor="middle" class="nodeSub" style="font-size:12px">Platform Flywheel</text>
-                <text x="360" y="312" text-anchor="middle" class="nodeSub" style="font-size:11px">Install → Run → Scale</text>
-              </g>
+              <div class="node n1" data-key="peak301" onclick="selectNode('peak301')">
+                <img alt="Peak 301" data-srcset="assets/peak301.jpg|assets/peak301.jpeg|assets/peak301.png">
+                <div class="lbl">Peak 301</div>
+                <div class="subLbl">Rejuvenation</div>
+              </div>
 
-              <!-- node helper: circle + logo image + label -->
-              <!-- 0 PayPixl -->
-              <g class="nodeHit" onclick="selectNode('paypixl')">
-                <circle id="n_paypixl" class="nodeCircle" cx="360" cy="95" r="50"></circle>
-                <image href="assets/paypixl.jpg" x="332" y="72" width="56" height="40" preserveAspectRatio="xMidYMid meet"></image>
-                <text x="360" y="122" text-anchor="middle" class="nodeLabel">PayPixl</text>
-                <text x="360" y="138" text-anchor="middle" class="nodeSub">Origination</text>
-              </g>
+              <div class="node n2" data-key="paypixl" onclick="selectNode('paypixl')">
+                <img alt="PayPixl" data-srcset="assets/paypixl.jpg|assets/paypixl.jpeg|assets/paypixl.png">
+                <div class="lbl">PayPixl</div>
+                <div class="subLbl">AI Proof + Lead Sheet</div>
+              </div>
 
-              <!-- 1 City Publications -->
-              <g class="nodeHit" onclick="selectNode('citypub')">
-                <circle id="n_citypub" class="nodeCircle" cx="595" cy="270" r="50"></circle>
-                <image href="assets/CityPub-logo.jpg" x="567" y="247" width="56" height="40" preserveAspectRatio="xMidYMid meet"></image>
-                <text x="595" y="297" text-anchor="middle" class="nodeLabel">City Pub</text>
-                <text x="595" y="313" text-anchor="middle" class="nodeSub">QR Mail</text>
-              </g>
+              <div class="node n3" data-key="citypub" onclick="selectNode('citypub')">
+                <img alt="City Publications" data-srcset="assets/CityPub-logo.jpg|assets/citypublications.jpg|assets/citypublications.jpeg|assets/citypublications.png">
+                <div class="lbl">City Publications</div>
+                <div class="subLbl">QR Mailers</div>
+              </div>
 
-              <!-- 2 Triage / White Label -->
-              <g class="nodeHit" onclick="selectNode('triage')">
-                <circle id="n_triage" class="nodeCircle" cx="450" cy="510" r="50"></circle>
-                <image href="assets/peak-pros.jpg" x="422" y="486" width="56" height="40" preserveAspectRatio="xMidYMid meet"></image>
-                <text x="450" y="537" text-anchor="middle" class="nodeLabel">Triage</text>
-                <text x="450" y="553" text-anchor="middle" class="nodeSub">R / RJ / RP</text>
-              </g>
+              <div class="node n4" data-key="triage" onclick="selectNode('triage')">
+                <img alt="Peak Pros" data-srcset="assets/peak-pros.jpg|assets/peak-pros.jpeg|assets/peak-pros.png">
+                <div class="lbl">Triage</div>
+                <div class="subLbl">Repair / Rejuv / Replace</div>
+              </div>
 
-              <!-- 3 Claims + Disbursement -->
-              <g class="nodeHit" onclick="selectNode('claims')">
-                <circle id="n_claims" class="nodeCircle" cx="170" cy="435" r="50"></circle>
-                <image href="assets/5th-element.jpeg" x="142" y="412" width="56" height="40" preserveAspectRatio="xMidYMid meet"></image>
-                <text x="170" y="462" text-anchor="middle" class="nodeLabel">Claims</text>
-                <text x="170" y="478" text-anchor="middle" class="nodeSub">5th Element</text>
-              </g>
+              <div class="node n5" data-key="whitelabel" onclick="selectNode('whitelabel')">
+                <img alt="Peak Pros White Label" data-srcset="assets/peak-pros.jpg|assets/peak-pros.jpeg|assets/peak-pros.png">
+                <div class="lbl">White Label</div>
+                <div class="subLbl">Peak Pros Program</div>
+              </div>
 
-              <!-- 4 Legal + Health / Valuation -->
-              <g class="nodeHit" onclick="selectNode('health')">
-                <circle id="n_health" class="nodeCircle" cx="170" cy="170" r="50"></circle>
-                <image href="assets/tradegauge.jpg" x="142" y="146" width="56" height="40" preserveAspectRatio="xMidYMid meet"></image>
-                <text x="170" y="197" text-anchor="middle" class="nodeLabel">Health</text>
-                <text x="170" y="213" text-anchor="middle" class="nodeSub">TradeGauge</text>
-              </g>
-            </svg>
+              <div class="node n6" data-key="claims" onclick="selectNode('claims')">
+                <img alt="5th Element" data-srcset="assets/5th-element.jpeg|assets/5th-element.jpg|assets/5th-element.png">
+                <div class="lbl">Claims / iink</div>
+                <div class="subLbl">Outcome + Disbursement</div>
+              </div>
+
+              <div class="node n7" data-key="profit" onclick="selectNode('profit')">
+                <img alt="TradeGauge" data-srcset="assets/tradegauge.jpg|assets/tradegauge.jpeg|assets/tradegauge.png">
+                <div class="lbl">Profit / Exit</div>
+                <div class="subLbl">TradeGauge.ai</div>
+              </div>
+            </div>
           </div>
 
+          <!-- DETAILS -->
           <div class="details">
             <div class="detailTop">
               <div class="detailLogo" id="detailLogo"></div>
               <div>
-                <h3 id="detailTitle">PayPixl Lead Origination (Interactive + Lead Sheet)</h3>
-                <p id="detailSubtitle">AI-assessed roof proof + contractor lead sheet data packet that powers City Publications mail and your outreach engine.</p>
-                <div class="tagRow">
-                  <span class="tag acc" id="detailTag1">Origination</span>
-                  <span class="tag ok" id="detailTag2">Proof</span>
-                  <span class="tag" id="detailTag3">Targeting</span>
-                </div>
+                <h3 id="detailTitle">RPM — Territory + Training + Procurement</h3>
+                <p id="detailSubtitle">The foundation: territory ownership, contractor onboarding, equipment, and solution procurement.</p>
               </div>
             </div>
 
-            <div class="detailBody" id="detailBody"></div>
-
-            <div class="detailBullets">
-              <ul id="detailList"></ul>
+            <div class="detailBody">
+              <ul class="bul" id="detailBullets"></ul>
             </div>
 
             <div class="valueBox">
-              <strong id="detailValueTitle">Bottom-Line Impact</strong>
+              <strong id="detailValueTitle">Day-1 Bottom Line Impact</strong>
               <span id="detailValueText"></span>
             </div>
 
-            <div class="ctaRow">
-              <a class="miniBtn" id="detailCta1" href="#workflow">See Full Workflow</a>
-              <a class="miniBtn" id="detailCta2" href="#revenue">See Revenue Scenarios</a>
-              <a class="miniBtn" id="detailCta3" href="#contact">Book a Call</a>
-            </div>
+            <a class="btn" id="detailCta" href="#workflow">See Full Workflow</a>
           </div>
         </div>
       </div>
@@ -544,256 +512,69 @@
     <!-- WORKFLOW -->
     <div id="workflow" class="section">
       <div class="card panel">
-        <h2>Workable Order (What Each Offering Does)</h2>
-        <p>
-          This is the operational order for Peak 301 contractors. The platform is designed so you can start small, then add enterprise services only when needed.
-        </p>
+        <h2>Plug-and-Play Workflow (Contractor-Ready)</h2>
+        <p>This is the order Peak 301 contractors actually execute. RPM enables the platform; PayPixl + CityPub produce demand; triage monetizes every roof.</p>
 
-        <div class="workflowGrid">
-          <div class="steps">
-            <div class="step">
-              <div class="stepIcon"><img src="assets/paypixl.jpg" alt="PayPixl"></div>
-              <div>
-                <h4>1) PayPixl Lead Origination (Interactive Proof + Lead Sheet)</h4>
-                <p>
-                  Capture roofs and generate an AI-assessed, homeowner-facing “proof” experience with clickable damage markers + explainer content,
-                  <b>and</b> a contractor-facing lead sheet with the property/owner data packet used to market the lead.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/CityPub-logo.jpg" alt="City Publications"></div>
-              <div>
-                <h4>2) City Publications Direct Mail (QR → Proof → Quote)</h4>
-                <p>
-                  Print and mail targeted pieces to the exact properties sourced from PayPixl capture + data. Each mailer uses a QR code that routes the homeowner
-                  into the interactive roof proof and your quote workflow (repair / rejuvenate / replacement).
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/peak-pros.jpg" alt="Peak Pros"></div>
-              <div>
-                <h4>3) Multi-Channel Outreach Engine (Follow-Up)</h4>
-                <p>
-                  After mail hits: text + email + cold email + call center + door knock can be layered to drive immediate appointments.
-                  Peak Pros can also build cold email campaigns for contractors as a paid service.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/peak301.jpg" alt="Peak 301"></div>
-              <div>
-                <h4>4) Triage: Repair • Rejuvenate • Replace (White-Label Offshoot)</h4>
-                <p>
-                  Every lead gets classified: <b>Repair</b> (minor), <b>Rejuvenate</b> (Peak 301 fit), or <b>Replace</b> (storm/age/condition).
-                  White-label rejuvenation activates here as a stand-alone high-margin offering.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/5th-element.jpeg" alt="5th Element"></div>
-              <div>
-                <h4>5) Claims Strategy (When Replace = Claim-Eligible)</h4>
-                <p>
-                  If there is damage sufficient for a claim, the platform routes the file into claims strategy and documentation posture,
-                  improving scope clarity, reducing leakage, and accelerating settlement momentum.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/iink.JPEG" alt="IINK"></div>
-              <div>
-                <h4>6) Settlement Services + Disbursement Control (IINK)</h4>
-                <p>
-                  When funds move, controlled disbursement and milestone logic reduces disputes, increases production velocity,
-                  and keeps cash predictable. This also creates cleaner audit trails for all parties.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/wek.jpg" alt="WEK"></div>
-              <div>
-                <h4>7) Legal Escalation (WEK) — Only If Carrier/Process Breaks</h4>
-                <p>
-                  If a file stalls or becomes a true escalation scenario, the platform can route the homeowner into an appropriate legal pathway.
-                  This is the “last mile” tool — used selectively.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/tradegauge.jpg" alt="TradeGauge.ai"></div>
-              <div>
-                <h4>8) Company Health + Valuation Lift (TradeGauge.ai)</h4>
-                <p>
-                  Pricing, margin discipline, and operational consistency raise contractor health — which supports long-term value creation and a pathway toward
-                  stronger sale-readiness (if/when a contractor wants private equity interest).
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/peak-pros.jpg" alt="Peak Pros"></div>
-              <div>
-                <h4>9) Back Office + Call Center (Add-Ons)</h4>
-                <p>
-                  Add digital back office support and call center capacity to increase speed to contact, improve booking rate, and reduce owner/operator load.
-                  These are optional add-ons once lead flow is proven.
-                </p>
-              </div>
-            </div>
+        <div class="flowGrid">
+          <div class="card flowCard">
+            <h3>1) RPM Territory + Onboarding</h3>
+            <p>Contractor becomes equipped and trained to deliver Peak 301 correctly.</p>
+            <ul>
+              <li>Territory procurement + certification pathway</li>
+              <li>Equipment + Peak 301 solution procurement</li>
+              <li>Training portal + standards that protect outcomes</li>
+            </ul>
           </div>
 
-          <div class="charts">
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Minimal Investment (Start Here)</b>
-                <span>PayPixl → City Publications → Follow-Up</span>
-              </div>
-              <div class="barWrap"><div class="bar base" style="width:42%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>What you buy</strong><span>Proof + QR mail + follow-up motion</span></div>
-                <div class="numBox"><strong>What it produces</strong><span>More booked appts + higher trust</span></div>
-              </div>
-            </div>
-
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Growth Mode</b>
-                <span>Add White-Label Peak 301 + cold email</span>
-              </div>
-              <div class="barWrap"><div class="bar good" style="width:68%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>What you add</strong><span>Rejuvenation + outbound engine</span></div>
-                <div class="numBox"><strong>What it produces</strong><span>Higher revenue per lead</span></div>
-              </div>
-            </div>
-
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Enterprise Mode</b>
-                <span>Claims + disbursement + legal + back office</span>
-              </div>
-              <div class="barWrap"><div class="bar great" style="width:88%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>What you add</strong><span>Settlement velocity + control</span></div>
-                <div class="numBox"><strong>What it produces</strong><span>Faster cash + fewer disputes</span></div>
-              </div>
-            </div>
-
-            <p class="small" style="margin:12px 0 0">
-              These are scenario bands to show scalability. Exact KPIs will be defined per contractor market and capacity.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- REVENUE -->
-    <div id="revenue" class="section">
-      <div class="card panel">
-        <h2>Revenue Scenarios (Scalable Charts)</h2>
-        <p>
-          Below are illustrative growth bands showing how the platform increases revenue by improving (1) lead conversion, (2) revenue per lead via triage, and (3) cash velocity / dispute reduction.
-          The purpose is to show how this can become a high-revenue platform business (installation + recurring).
-        </p>
-
-        <div class="workflowGrid">
-          <div class="steps">
-            <div class="step">
-              <div class="stepIcon"><img src="assets/paypixl.jpg" alt="PayPixl"></div>
-              <div>
-                <h4>Install Fee (Platform Setup)</h4>
-                <p>
-                  You get paid to install the system: PayPixl routing, City Publications mail setup, tracking/QR workflow, follow-up motion, triage scripts, and partner handoffs.
-                  This is a one-time fee to launch.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/CityPub-logo.jpg" alt="City Publications"></div>
-              <div>
-                <h4>Recurring (Monthly Management)</h4>
-                <p>
-                  You get paid monthly to manage campaigns: neighborhood selection, mail drops, follow-up cadence, appointment KPI tracking, and vendor coordination.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/peak301.jpg" alt="Peak 301"></div>
-              <div>
-                <h4>Commission / Revenue Share (When Contractors Activate Services)</h4>
-                <p>
-                  You can also earn per-activation commissions when contractors sign up for enterprise features (claims support, disbursement, call center, cold email buildout, etc.).
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="stepIcon"><img src="assets/tradegauge.jpg" alt="TradeGauge"></div>
-              <div>
-                <h4>Value Lift (Contractor Health → Sale Readiness)</h4>
-                <p>
-                  Better pricing discipline and operational health creates a more valuable contractor. The platform becomes a differentiator that supports premium valuation and scalability.
-                </p>
-              </div>
-            </div>
-
-            <div class="callout" style="margin-top:10px">
-              <b>Business Model Goal:</b> install revenue + recurring management + commissions/rev share.
-              This is how the platform becomes a million-dollar venture: replicate across many Peak 301 contractors.
-            </div>
+          <div class="card flowCard">
+            <h3>2) PayPixl Origination</h3>
+            <p>AI roof assessment + clickable proof + contractor lead sheet.</p>
+            <ul>
+              <li>Homeowner-facing proof (AI markers + explainers)</li>
+              <li>Contractor lead sheet (parcel/owner/mailing address)</li>
+              <li>Storm-event history supports timing + triage</li>
+            </ul>
           </div>
 
-          <div class="charts">
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Scenario A — Conservative</b>
-                <span>10 contractors onboarded</span>
-              </div>
-              <div class="barWrap"><div class="bar base" style="width:45%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>Install revenue</strong><span>10 installs / quarter</span></div>
-                <div class="numBox"><strong>Recurring</strong><span>Monthly management retained</span></div>
-              </div>
-            </div>
+          <div class="card flowCard">
+            <h3>3) City Publications QR Mailers</h3>
+            <p>Mail to verified addresses. QR sends homeowner to “their roof” proof and your intake.</p>
+            <ul>
+              <li>6×11 campaigns tied directly to PayPixl lists</li>
+              <li>QR conversion rail: proof → selection → contact</li>
+              <li>Batch scaling (1k / 5k / 10k drops)</li>
+            </ul>
+          </div>
 
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Scenario B — Likely</b>
-                <span>25 contractors onboarded</span>
-              </div>
-              <div class="barWrap"><div class="bar good" style="width:70%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>Install revenue</strong><span>Scaled installs + referrals</span></div>
-                <div class="numBox"><strong>Enterprise add-ons</strong><span>Claims/disbursement/call center</span></div>
-              </div>
-            </div>
+          <div class="card flowCard">
+            <h3>4) Classification: Repair / Rejuvenate / Replace</h3>
+            <p>No wasted lead. Every roof becomes a lane.</p>
+            <ul>
+              <li>Repair: fast cash + high close rate</li>
+              <li>Rejuvenate: Peak 301 margin lane</li>
+              <li>Replace: retail or insurance path</li>
+            </ul>
+          </div>
 
-            <div class="chartCard">
-              <div class="chartTitle">
-                <b>Scenario C — Aggressive</b>
-                <span>50+ contractors onboarded</span>
-              </div>
-              <div class="barWrap"><div class="bar great" style="width:92%"></div></div>
-              <div class="numbers">
-                <div class="numBox"><strong>Install revenue</strong><span>Repeatable playbook</span></div>
-                <div class="numBox"><strong>Platform scale</strong><span>Recurring + commissions stack</span></div>
-              </div>
-            </div>
+          <div class="card flowCard">
+            <h3>5) Peak Pros White Label Program (Add-On)</h3>
+            <p>Contractor can deploy rejuvenation under their brand or Peak Pros.</p>
+            <ul>
+              <li>Enterprise pricing + playbooks</li>
+              <li>Revenue share options (where applicable)</li>
+              <li>Upsell that increases territory value</li>
+            </ul>
+          </div>
 
-            <p class="small" style="margin:12px 0 0">
-              This section is intentionally “platform level.” Final numbers are set when pricing is decided (install fee, monthly management, commission structure).
-            </p>
+          <div class="card flowCard">
+            <h3>6) Claims + Settlement + Legal + Profit Health</h3>
+            <p>When damage warrants: claims support, money control, legal escalation, and PE readiness.</p>
+            <ul>
+              <li>Claims support: 5th Element (where permitted)</li>
+              <li>Disbursement: iink (settlement workflow)</li>
+              <li>Legal escalation: WEK (when appropriate)</li>
+              <li>Profit + exit pathway: TradeGauge.ai</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -803,19 +584,16 @@
     <div id="contact" class="section">
       <div class="card panel">
         <h2>Book a Strategy Call</h2>
-        <p>
-          Use this call to define your contractor offer: install fee, monthly management, commission structure, and which features become the “minimal investment” starter kit.
-        </p>
+        <p>Use this to onboard Peak 301 contractors into the platform and activate the flywheel.</p>
         <div class="heroActions">
           <a class="btn" href="https://calendly.com/YOUR-LINK-HERE" target="_blank" rel="noreferrer">Open Calendly</a>
-          <a class="btn secondary" href="mailto:YOUR@EMAIL.COM?subject=Peak%20Pros%20Platform%20Strategy%20Call&body=Name%3A%0ACompany%3A%0APhone%3A%0AMarket%3A%0AHow%20many%20leads%20per%20month%3F%0AWhat%20do%20you%20sell%20today%3F%0A">Email Us</a>
+          <a class="btn secondary" href="mailto:YOUR@EMAIL.COM?subject=Peak%20Pros%20Platform%20Call&body=Name%3A%0ACompany%3A%0APhone%3A%0ATerritory%20Market%3A%0AWhat%20do%20you%20want%20to%20activate%20first%3F%0A">Email Us</a>
         </div>
 
         <div class="footer">
           <div class="legal">
-            <b>Disclosure & Compliance:</b> The Peak Pros Platform™ is enablement + workflow. We are not a law firm and do not provide legal advice.
-            Claims services, legal escalation, and any regulated activities must be performed by the properly licensed/authorized parties where required.
-            Third-party logos remain property of their respective owners.
+            <b>Disclosure & Compliance:</b> We are not a law firm and do not provide legal advice. Public adjusting/claims services are offered only where properly licensed/permitted.
+            Third-party logos remain property of their respective owners. Partner compensation (referral/revenue share) is disclosed where applicable and permitted.
           </div>
           <div>© <span id="yr"></span> The Peak Pros Platform™</div>
         </div>
@@ -825,186 +603,209 @@
   </div>
 
   <script>
-    // ---------- CONFIG (LOGO PATHS MUST MATCH YOUR /assets FILENAMES) ----------
-    const LOGOS = {
-      peakpros: "assets/peak-pros.jpg",
-      paypixl: "assets/paypixl.jpg",
-      citypub: "assets/CityPub-logo.jpg",
-      peak301: "assets/peak301.jpg",
-      fifth: "assets/5th-element.jpeg",
-      iink: "assets/iink.JPEG",
-      wek: "assets/wek.jpg",
-      tradegauge: "assets/tradegauge.jpg"
-    };
+    // Try multiple image filenames automatically (helps if RPM filename differs).
+    function applySrcset(img){
+      const srcset = (img.getAttribute("data-srcset") || "").split("|").map(s=>s.trim()).filter(Boolean);
+      if(!srcset.length) return;
+      let i = 0;
+      const tryNext = () => {
+        if(i >= srcset.length) return;
+        img.src = srcset[i++];
+      };
+      img.addEventListener("error", tryNext, { once:false });
+      tryNext();
+    }
+    document.querySelectorAll("img[data-srcset]").forEach(applySrcset);
 
-    // ---------- NODE DATA (WHAT YOU CLICK IN THE FLYWHEEL) ----------
     const NODES = {
+      rpm: {
+        title:"RPM — Territory + Training + Procurement",
+        subtitle:"The foundation: territory ownership, contractor onboarding, equipment, Peak 301 solution, and training standards.",
+        logoSrcset:"assets/rpm.jpg|assets/rpm.png|assets/RPM Roof Solutions 1.jpg|assets/RPM%20Roof%20Solutions%201.jpg",
+        bullets:[
+          "Territory acquisition + contractor onboarding pipeline.",
+          "Equipment + Peak 301 solution procurement for contractors.",
+          "Training portal + standards that protect outcomes and reduce errors.",
+          "This is where the Peak Pros Platform lives best: inside the Peak 301 contractor ecosystem."
+        ],
+        valueTitle:"Day-1 Bottom Line Impact",
+        valueText:"RPM makes contractors operational. The Platform makes them scalable: leads → triage → monetization → profit health.",
+        ctaText:"Next: Peak 301 lane",
+        ctaHref:"#flywheel"
+      },
+      peak301: {
+        title:"Peak 301 — Rejuvenation Revenue Lane",
+        subtitle:"High-margin service line that competes immediately with Roof Maxx by pairing proof + delivery + underwriting support.",
+        logoSrcset:"assets/peak301.jpg|assets/peak301.jpeg|assets/peak301.png",
+        bullets:[
+          "Fast cash lane between claims and retail replacements.",
+          "Territory leverage + repeatable SOP improves consistency.",
+          "Pairs with post-application roof condition reporting (underwriting credibility).",
+          "Feeds back into PayPixl for proof-driven upsells and neighborhood saturation."
+        ],
+        valueTitle:"New Revenue Stream",
+        valueText:"Adds margin and capacity utilization without building a full replacement-only business model.",
+        ctaText:"Next: PayPixl origination",
+        ctaHref:"#flywheel"
+      },
       paypixl: {
-        circleId: "n_paypixl",
-        title: "PayPixl Lead Origination (Interactive Proof + Lead Sheet)",
-        subtitle: "AI-assessed roof with clickable damage markers + contractor data packet used to power marketing and outreach.",
-        tags: ["Origination", "Proof", "Targeting"],
-        tagStyles: ["acc", "ok", ""],
-        logo: LOGOS.paypixl,
-        body: `
-          PayPixl creates an AI-assessed roof with damage markers (homeowner-facing proof) and a contractor-facing lead sheet (data packet)
-          used for direct mail and multi-channel outreach. The data packet supports confident targeting and follow-up motion.
-        `,
-        bullets: [
-          "Homeowner proof: AI-marked roof image + explainer content increases trust and urgency.",
-          "Contractor lead sheet: property/owner/mailing targeting packet supports outreach at scale.",
-          "Damage markers create instant clarity: repair vs rejuvenate vs replace triage starts here.",
-          "Output routes directly into City Publications for QR mailers + neighborhood saturation."
+        title:"PayPixl Lead Origination (Interactive Proof + Lead Sheet)",
+        subtitle:"AI-assessed roof with clickable damage markers + contractor StormView lead sheet for targeting.",
+        logoSrcset:"assets/paypixl.jpg|assets/paypixl.jpeg|assets/paypixl.png",
+        bullets:[
+          "Homeowner proof: AI-marked roof image increases trust and urgency.",
+          "Clickable markers can trigger explainer content (education + conversion).",
+          "Contractor lead sheet: parcel + owner + mailing address supports compliant targeting.",
+          "Storm-event history supports timing, narrative, and claim triage when appropriate.",
+          "Routes directly into City Publications for QR-coded mailers tied to the exact roof."
         ],
-        valueTitle: "Bottom-Line Impact",
-        valueText: "Increases trust and response rate by using proof + targeting instead of generic advertising."
+        valueTitle:"Day-1 Bottom Line Impact",
+        valueText:"Higher close rates + lower lead cost by owning proof and targeting.",
+        ctaText:"Next: City Publications",
+        ctaHref:"#flywheel"
       },
-
       citypub: {
-        circleId: "n_citypub",
-        title: "City Publications Direct Mail (QR-Coded to Roof Proof)",
-        subtitle: "Print + mail to the exact addresses sourced from PayPixl; QR routes homeowners into proof and quote intake.",
-        tags: ["Direct Mail", "QR Conversion", "Neighborhood Scale"],
-        tagStyles: ["", "ok", ""],
-        logo: LOGOS.citypub,
-        body: `
-          City Publications prints and mails targeted pieces to verified properties sourced from PayPixl capture.
-          Each mailer uses a QR code that routes homeowners into the interactive roof proof and your quote workflow.
-        `,
-        bullets: [
-          "Mail to verified addresses from the PayPixl data packet (property/owner/mailing).",
-          "QR routes to proof + quote intake (no dead leads).",
-          "Neighborhood saturation: batch drops that compound over time.",
-          "Pairs with text/email/cold email/call center/door knock for fast follow-up."
+        title:"City Publications — QR-Coded Direct Mail at Scale",
+        subtitle:"Print + mail to verified addresses from PayPixl. QR links homeowner to their roof proof and contractor intake.",
+        logoSrcset:"assets/CityPub-logo.jpg|assets/citypublications.jpg|assets/citypublications.jpeg|assets/citypublications.png",
+        bullets:[
+          "Mail to verified addresses sourced from PayPixl data packets.",
+          "QR routes to interactive proof + selection workflow (no dead leads).",
+          "Batch scaling: 1k / 5k / 10k drops by neighborhood and budget.",
+          "Pairs with text/email/cold email/call center for fast follow-up."
         ],
-        valueTitle: "Bottom-Line Impact",
-        valueText: "Turns lead data into booked appointments by delivering proof to the right doorstep."
+        valueTitle:"Immediate Value",
+        valueText:"Physical mail legitimizes digital proof and increases response rates.",
+        ctaText:"Next: Repair / Rejuvenate / Replace",
+        ctaHref:"#workflow"
       },
-
       triage: {
-        circleId: "n_triage",
-        title: "Triage: Repair • Rejuvenate • Replace (Peak Pros White-Label)",
-        subtitle: "Every homeowner gets a simple path and a clear offer; rejuvenation becomes a stand-alone offshoot when it fits.",
-        tags: ["Classification", "White-Label", "Revenue Lift"],
-        tagStyles: ["", "acc", "ok"],
-        logo: LOGOS.peakpros,
-        body: `
-          The platform’s core decision point: classify each roof into Repair, Rejuvenate (Peak 301 fit), or Replace (claim-eligible or retail).
-          White-label rejuvenation activates here as a stand-alone high-margin offering for Peak 301 contractors.
-        `,
-        bullets: [
-          "Repair: handle small issues fast; protect reputation and reduce callbacks.",
-          "Rejuvenate: white-label Peak 301 revenue (high-margin service expansion).",
-          "Replace: proceed via retail or claim pathway depending on condition/damage.",
-          "This triage increases revenue per lead by matching the right solution."
+        title:"Triage — Repair / Rejuvenate / Replace",
+        subtitle:"Every roof becomes a lane. No wasted leads. The platform monetizes outcomes, not just one product.",
+        logoSrcset:"assets/peak-pros.jpg|assets/peak-pros.jpeg|assets/peak-pros.png",
+        bullets:[
+          "Repair: fast close, immediate cash, reduced friction.",
+          "Rejuvenate: Peak 301 high-margin lane with scalable delivery.",
+          "Replace: retail or insurance path depending on damage and scope.",
+          "Creates a repeatable decision engine contractors can train staff to execute."
         ],
-        valueTitle: "Bottom-Line Impact",
-        valueText: "Raises revenue per lead by offering the right solution instead of forcing a single outcome."
+        valueTitle:"Flywheel Conversion",
+        valueText:"Triage turns interest into revenue regardless of roof condition.",
+        ctaText:"Next: White Label program",
+        ctaHref:"#workflow"
       },
-
+      whitelabel: {
+        title:"Peak Pros White Label Program",
+        subtitle:"Enterprise-level deal stack so contractors can deploy rejuvenation under their brand or Peak Pros.",
+        logoSrcset:"assets/peak-pros.jpg|assets/peak-pros.jpeg|assets/peak-pros.png",
+        bullets:[
+          "Plug-and-play white label offering for contractors who want speed to market.",
+          "Sales scripts + activation playbook + optional revenue share structure.",
+          "Makes territories more valuable by increasing close rates and expanding services.",
+          "Pairs with PayPixl proof and CityPub outreach for immediate demand."
+        ],
+        valueTitle:"Scalable Upside",
+        valueText:"This is the “contractor accelerator” lane that increases per-lead revenue.",
+        ctaText:"Next: Claims / iink",
+        ctaHref:"#workflow"
+      },
       claims: {
-        circleId: "n_claims",
-        title: "Claims Strategy + Settlement Services (When Claim-Eligible)",
-        subtitle: "Stronger documentation posture + cleaner scope logic; route to disbursement control and legal escalation only when needed.",
-        tags: ["Claims", "Settlement", "Escalation"],
-        tagStyles: ["warn", "", ""],
-        logo: LOGOS.fifth,
-        body: `
-          When replace is claim-eligible, the platform routes the file into a stronger claims posture: documentation standards, scope logic,
-          supplement rhythm, and escalation decisioning. This reduces leakage and speeds momentum.
-        `,
-        bullets: [
-          "Clean claim positioning reduces carrier friction and missed scope.",
-          "Better evidence packaging improves outcomes and speeds timelines.",
-          "When funds move: route into IINK disbursement logic (milestones + audit trail).",
-          "If the file becomes a true escalation scenario: route to WEK as appropriate."
+        title:"Claims + Settlement Control (5th Element + iink + WEK)",
+        subtitle:"When damage warrants: move from proof to outcomes with clean documentation, controlled disbursement, and escalation options.",
+        logoSrcset:"assets/5th-element.jpeg|assets/5th-element.jpg|assets/5th-element.png",
+        bullets:[
+          "5th Element: claims support workflow + file discipline (where permitted).",
+          "iink: settlement services + controlled disbursement to reduce disputes and cash chaos.",
+          "WEK: legal escalation pathway when negotiation stalls and escalation is appropriate.",
+          "The goal: faster, cleaner money with fewer blow-ups."
         ],
-        valueTitle: "Bottom-Line Impact",
-        valueText: "Faster, cleaner money with fewer disputes by installing repeatable posture and control."
+        valueTitle:"Cash Velocity",
+        valueText:"Claims and settlement workflows reduce leakage and shorten time-to-cash.",
+        ctaText:"Next: Profit / Exit",
+        ctaHref:"#flywheel"
       },
-
-      health: {
-        circleId: "n_health",
-        title: "Company Health + Valuation Lift (TradeGauge.ai)",
-        subtitle: "Pricing discipline and margin guardrails that keep contractors healthy and scalable.",
-        tags: ["Pricing", "Margin", "Valuation"],
-        tagStyles: ["", "ok", ""],
-        logo: LOGOS.tradegauge,
-        body: `
-          Contractors don’t lose by lack of leads — they lose by bad pricing, weak margin discipline, and operational chaos.
-          This layer installs guardrails so contractors remain healthy, scalable, and more valuable over time.
-        `,
-        bullets: [
-          "Reduce underbidding by tightening estimating and pricing discipline.",
-          "Protect gross profit so growth doesn’t create cash pain.",
-          "Improve operational consistency to support scale and sale-readiness.",
-          "This is the “health layer” that makes the platform sticky long-term."
+      profit: {
+        title:"Profit Health + PE Readiness (TradeGauge.ai)",
+        subtitle:"Build a healthier contractor business: pricing intelligence, margin guardrails, and a pathway to higher valuation.",
+        logoSrcset:"assets/tradegauge.jpg|assets/tradegauge.jpeg|assets/tradegauge.png",
+        bullets:[
+          "Stop underbidding and protect gross profit with market-aligned pricing intelligence.",
+          "Job-level margin discipline and forecasting for stability.",
+          "Creates a PE-ready narrative: clean financials + repeatable systems.",
+          "If they want to sell, this helps them become valuable faster."
         ],
-        valueTitle: "Bottom-Line Impact",
-        valueText: "Protects margins and stabilizes operations so growth becomes profitable and sustainable."
+        valueTitle:"Enterprise Value",
+        valueText:"Turns a contractor from “jobs” into an asset with multiple revenue lanes and defensible systems.",
+        ctaText:"Back to PayPixl origination",
+        ctaHref:"#flywheel"
       }
     };
 
-    // ---------- UI HELPERS ----------
-    function setActiveCircle(circleId){
-      const all = ["n_paypixl","n_citypub","n_triage","n_claims","n_health"];
-      all.forEach(id=>{
-        const el = document.getElementById(id);
-        if(el) el.classList.toggle("active", id === circleId);
+    let activeKey="rpm", mode="auto", timer=null;
+
+    function setWheelMode(next){
+      mode = next;
+      document.querySelectorAll(".tab[data-mode]").forEach(t=>{
+        t.classList.toggle("active", t.dataset.mode===next);
       });
+      if(mode==="auto") startAuto(); else stopAuto();
     }
-
-    function renderTags(tags, styles){
-      const t1 = document.getElementById("detailTag1");
-      const t2 = document.getElementById("detailTag2");
-      const t3 = document.getElementById("detailTag3");
-
-      [t1,t2,t3].forEach((t,i)=>{
-        if(!t) return;
-        t.className = "tag";
-        const style = (styles && styles[i]) ? styles[i] : "";
-        if(style) t.classList.add(style);
-        t.textContent = tags && tags[i] ? tags[i] : "";
-      });
+    function startAuto(){
+      stopAuto();
+      const keys = ["rpm","peak301","paypixl","citypub","triage","whitelabel","claims","profit"];
+      timer = setInterval(()=>{
+        const idx = keys.indexOf(activeKey);
+        const next = keys[(idx+1) % keys.length];
+        selectNode(next, true);
+      }, 4200);
     }
+    function stopAuto(){ if(timer){ clearInterval(timer); timer=null; } }
 
-    function selectNode(key){
-      const d = NODES[key];
-      if(!d) return;
-
-      setActiveCircle(d.circleId);
-
-      const logoBox = document.getElementById("detailLogo");
-      logoBox.innerHTML = "";
+    function setDetailLogo(srcset){
+      const box = document.getElementById("detailLogo");
+      box.innerHTML = "";
       const img = document.createElement("img");
-      img.src = d.logo;
-      img.alt = key + " logo";
-      logoBox.appendChild(img);
+      img.setAttribute("data-srcset", srcset);
+      box.appendChild(img);
+      applySrcset(img);
+    }
 
-      document.getElementById("detailTitle").textContent = d.title;
-      document.getElementById("detailSubtitle").textContent = d.subtitle;
+    function selectNode(key, fromAuto=false){
+      const data = NODES[key];
+      if(!data) return;
+      activeKey = key;
 
-      // body (as text)
-      document.getElementById("detailBody").textContent = d.body.replace(/\s+/g," ").trim();
+      document.querySelectorAll(".node").forEach(n=>{
+        n.classList.toggle("active", n.dataset.key===key);
+      });
 
-      // bullets
-      const ul = document.getElementById("detailList");
+      document.getElementById("detailTitle").textContent = data.title;
+      document.getElementById("detailSubtitle").textContent = data.subtitle;
+
+      const ul = document.getElementById("detailBullets");
       ul.innerHTML = "";
-      d.bullets.forEach(b=>{
+      data.bullets.forEach(b=>{
         const li = document.createElement("li");
         li.textContent = b;
         ul.appendChild(li);
       });
 
-      document.getElementById("detailValueTitle").textContent = d.valueTitle;
-      document.getElementById("detailValueText").textContent = d.valueText;
+      document.getElementById("detailValueTitle").textContent = data.valueTitle;
+      document.getElementById("detailValueText").textContent = data.valueText;
 
-      renderTags(d.tags, d.tagStyles);
+      setDetailLogo(data.logoSrcset);
+
+      const cta = document.getElementById("detailCta");
+      cta.textContent = data.ctaText;
+      cta.href = data.ctaHref;
+
+      if(mode==="auto" && !fromAuto) startAuto();
     }
 
-    // ---------- INIT ----------
     document.getElementById("yr").textContent = new Date().getFullYear();
-    selectNode("paypixl");
+    // Default selection:
+    selectNode("rpm", true);
+    startAuto();
   </script>
 </body>
 </html>
